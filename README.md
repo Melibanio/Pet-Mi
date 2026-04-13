@@ -2,6 +2,7 @@
 PetShop
 
 E-Commerce com 5 páginas principais (Tema PetShop)
+
 Home (Tela Inicial) / Melissa
 Carrinho de compras / Marcos
 Perfil do cliente / Laura
