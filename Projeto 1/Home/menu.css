@@ -1,0 +1,293 @@
+:root{
+    --verde: #455d43;
+    --olivia: #667d41;
+    --laranja: #f27a21;
+    --terra: #b43f1d;
+    --cobalto: #2a3691;
+    --azul: #4d61d4;
+    --branco: #fff;
+    --preto: #000;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+     padding: 2rem 9%;
+
+}
+
+/*Menu padrão do site */
+header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    background: transparent;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: var(--branco);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header .navbar a{
+    font-size: 2rem;
+    padding: 0 1.5rem;
+    color: var(--branco);
+    text-decoration: none;
+
+}
+
+header .navbar a:hover{
+    color: var(--preto);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color:var(--branco);
+    margin-left: 1rem;
+    text-decoration: none; 
+}
+
+header .icons a:hover{
+    color: var(--preto);
+}
+
+header #toggler{
+    display: none;
+}
+
+.banner {
+    min-height: 100vh;
+    background: url('/Img/banner.png')center/cover no-repeat;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+.banner .content{
+    color: white;
+    max-width: 50rem;
+    animation: entrafrases 1.5s ease-out forwards;
+}
+
+.banner h5{
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #b4b9df !important;
+}
+
+.banner h1{
+    font-size: 6rem;
+    margin-bottom: 1rem;
+}
+
+.banner p{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+.em-movimento{
+    position: absolute;
+    bottom: 0;        
+    right: -300px;    
+
+    width: 550px;  /*Tamanho do coelho*/
+
+    animation: entrarCoelho 1.5s ease-out forwards;
+}
+
+.btn{
+    display: inline-block;
+    background: var(--laranja);
+    color: white;
+    padding: 1rem 3rem;
+    border-radius: 5rem;
+    font-size: 1.5rem;
+    transition: 0.3s;
+}
+
+.btn:hover{
+    background: var(--terra);
+}
+
+.promo{
+    position: relative;
+    margin-top: -50px; 
+    padding: 0 9%;
+    z-index: 10;
+}
+
+.promo-box{
+    background: linear-gradient(90deg, #455d43, #667d41);
+    border-radius: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2.5rem 3rem;
+    color: white;
+
+    opacity: 0;
+    transform: translateY(50px);
+    animation: subir 1s ease forwards;
+}
+
+.promo-left{
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.promo-left i{
+    font-size: 3rem;
+}
+
+.promo-left h3{
+    font-size: 2rem;
+}
+
+.promo-left p{
+    font-size: 1.3rem;
+}
+
+.promo-btn{
+    background: white;
+    color: black;
+    padding: 1rem 2rem;
+    border-radius: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.categorias{
+    padding: 5rem 9%;
+    background: white;
+    text-align: center;
+}
+
+.titulo h1{
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.titulo p{
+    font-size: 1.4rem;
+    color: #666;
+}
+
+.linha{
+    width: 60px;
+    height: 4px;
+    background: orange;
+    margin: 1rem auto 3rem;
+    border-radius: 2px;
+}
+
+.cards{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* CARD INDIVIDUAL */
+.card{
+    background: #eee;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    width: 220px;
+
+    transition: 0.3s;
+}
+
+/* ÍCONE */
+.card i{
+    font-size: 4rem;
+    color: orange;
+    margin-bottom: 1rem;
+}
+
+/* TEXTO */
+.card h3{
+    font-size: 1.8rem;
+    margin-bottom: .5rem;
+}
+
+.card p{
+    font-size: 1.3rem;
+    color: #666;
+}
+
+.card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Animação da página*/
+@keyframes entrafrases{
+    from{
+        left: -300px;
+        opacity: 0;
+    }
+    to{
+        left: 70px;
+        opacity: 1;
+    }
+}
+@keyframes entrarCoelho{
+    from{
+        right: -300px;
+        opacity: 0;
+    }
+    to{
+        right: 110px; 
+        opacity: 1;
+    }
+}
+@keyframes subir{
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
