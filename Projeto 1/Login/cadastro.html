@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="cadastro.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
+   
+</head>
+<body>
+     <header>
+    <!--Menu simples login/cadastro para voltar ao home-->
+    <a href="/Home/menu.html" class="logo">PET&MI</a>
+    </header>
+    
+    <main>
+        <form action="cadastro" method="POST"> 
+            <h1>Crie sua conta</h1>
+            <hr>
+
+            <section>
+                <label for="nome">Nome e sobrenome</label>
+                <input type="text" name="nome" id="nome" placeholder="Digite seu nome e sobrenome" required>
+
+                <label for="email">E-mail</label>
+                <input type="text" name="email" id="email" placeholder="Digite seu e-mail" required>
+                
+                <label for="telefone">Telefone/WhatsApp</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="DDD + Celular" required>
+
+                <label for="senha">Crie sua senha</label>
+                <input type="password" id="senha" name="senha" placeholder="Digite sua senha"required>
+                
+                <button type="submit" class="cadastrar">Cadastrar</button>
+            </section>
+        </form>
+
+        <div class="imagem">
+            <img src="https://i.pinimg.com/736x/e0/e2/56/e0e256e67fab8a5d980e0933dc451866.jpg" alt="">
+        </div>
+    </main>
+</body>
+</html>
