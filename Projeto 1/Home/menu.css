@@ -14,7 +14,6 @@
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
     outline: none; border: none;
-    text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
 
@@ -32,7 +31,7 @@ section{
 
 /*Menu padrão do site */
 header{
-    position: fixed;
+    position: absolute;
     top:0; left: 0; right: 0;
     padding: 2rem 9%;
     display: flex;
@@ -42,6 +41,11 @@ header{
     background: transparent;
 }
 
+header ul{
+    list-style: none;
+    text-decoration: none;
+}
+
 header .logo{
     font-size: 3rem;
     color: var(--branco);
@@ -49,26 +53,42 @@ header .logo{
     text-decoration: none;
 }
 
-header .navbar a{
-    font-size: 2rem;
-    padding: 0 1.5rem;
-    color: var(--branco);
-    text-decoration: none;
-
+header .navbar {
+    display: flex;
+    align-items: center;
 }
 
-header .navbar a:hover{
+header .navbar li {
+    margin: 0 1.5rem;
+}
+
+header .navbar li a {
+    font-size: 2rem;
+    color: var(--branco);
+    text-decoration: none;
+}
+
+header .navbar li a:hover{
     color: var(--preto);
 }
 
-header .icons a{
-    font-size: 2.5rem;
-    color:var(--branco);
-    margin-left: 1rem;
-    text-decoration: none; 
+header .icons{
+    display: flex;
+    align-items: center;
 }
 
-header .icons a:hover{
+header .icons li{
+    margin-left: 1rem;
+    
+}
+
+header .icons li a{
+    font-size: 2.5rem;
+    color:var(--branco);
+    text-decoration: none;
+}
+
+header .icons li a:hover{
     color: var(--preto);
 }
 
@@ -108,7 +128,7 @@ header #toggler{
 }
 .em-movimento{
     position: absolute;
-    bottom: 0;        
+    bottom: -10px;        
     right: -300px;    
 
     width: 550px;  /*Tamanho do coelho*/
@@ -124,6 +144,7 @@ header #toggler{
     border-radius: 5rem;
     font-size: 1.5rem;
     transition: 0.3s;
+    margin-top: 0;
 }
 
 .btn:hover{
@@ -217,16 +238,42 @@ header #toggler{
     background: #eee;
     padding: 3rem 2rem;
     border-radius: 20px;
-    width: 220px;
-
+    width: 240px;
+    min-height: 280px;
     transition: 0.3s;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    text-align: center;
+    text-decoration: none;  
+    color: inherit;
 }
 
 /* ÍCONE */
 .card i{
-    font-size: 4rem;
+    font-size: 6rem;
     color: orange;
     margin-bottom: 1rem;
+    display: block;    
+}
+
+.card svg{
+    width: 6rem;           
+    height: 6rem;
+    fill: orange;          
+    margin-bottom: 1rem;
+    display: block;        
+    margin-left: auto;     /* ← centraliza horizontalmente */
+    margin-right: auto;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: #e0e0e0; 
 }
 
 /* TEXTO */
