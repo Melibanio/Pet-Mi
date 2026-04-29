@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="/Home/menu.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.9.1/fonts/remixicon.min.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+   
 </head>
 <body> 
     <!--Acesso Principal-->
     <header>
-    <!--Menu padrão para todos os acessos das paginas determinado pela equipe-->
     <a href="/Home/menu.html" class="logo">PET&MI</a>
 
     <ul class="navbar">
@@ -22,11 +22,11 @@
         <li><a href="#">ONG</a></li>
     </ul>
 
-    <div class="icons">
-        <a href="/Login/perfil.html#Favoritos"><i class="ri-heart-line"></i></a>
-        <a href="/Cart/carrinho.html"><i class="ri-shopping-cart-2-line"></i></a>
-        <a href="/Login/login.html"><i class="ri-user-3-line"></i></a>
-    </div>
+    <ul class="icons">
+       <li><a href="/Login/perfil.html#Favoritos"><i class="ri-heart-line"></i></a></li>
+        <li><a href="/Cart/carrinho.html"><i class="ri-shopping-cart-2-line"></i></a></li>
+        <li><a href="/Login/login.html"><i class="ri-user-3-line"></i></a></li>
+    </ul>
 
     </header>
 
@@ -72,29 +72,33 @@
 
     <div class="cards">
 
-        <div class="card">
-            <i class="ri-bear-smile-line"></i>
+        <a class="card" href="#">
+            <i class="fa-solid fa-dog"></i>
             <h3>Para cachorros</h3>
             <p>Integer at faucibus urna. Nullam imperdiet.</p>
-        </div>
+        </a>
 
-        <div class="card">
-            <i class="ri-github-line"></i>
+        <a class="card" href="#">
+            <i class="fa-solid fa-cat"></i>
             <h3>Para Gatos</h3>
             <p>Integer at faucibus urna. Nullam imperdiet.</p>
-        </div>
+        </a>
 
-        <div class="card">
-            <i class="ri-rabbit-line"></i>
+        <a class="card" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+            <path d="m14.231,5.065c-1.717.801-3.825,1.74-7.16,1.908-.578.029-1.07-.421-1.07-.999h0c0-.525.408-.971.933-.996,3.082-.149,4.957-1.026,6.63-1.808.116-.054.231-.108.346-.161-1.852-.442-4.32-.896-6.927-.991-.544-.02-.981-.455-.981-.999h0C6,.459,6.46-.002,7.019.018c5.494.191,10.27,1.846,10.784,2.029.209-.031.423-.047.641-.047,3.333,0,5.556,3.375,5.556,5.625,0,2.485-3.101,3.375-5.556,3.375s-4.444-2.015-4.444-4.5c0-.502.081-.984.231-1.435Zm8.769,16.935h-2v-9.258c-.782.169-1.638.258-2.556.258-2.723,0-5.058-1.713-6-4.127-7.408,2.366-9.004,8.84-9.347,11.456-.425-.28-.962-.402-1.529-.284-.758.159-1.38.79-1.529,1.55-.251,1.282.723,2.405,1.96,2.405h13v-3c0-2.206-1.794-4-4-4-.552,0-1-.448-1-1s.448-1,1-1c3.309,0,6,2.691,6,6v3h6c.552,0,1-.448,1-1s-.448-1-1-1Z"/>
+            </svg>
             <h3>Para coelhos</h3>
             <p>Integer at faucibus urna. Nullam imperdiet.</p>
-        </div>
+        </a>
 
-        <div class="card">
-            <i class="ri-twitter-line"></i>
+        <a class="card" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24">
+            <path d="m3.5,17h-1.71c-1.131-1.726-1.79-3.786-1.79-6v-4c0-.552.448-1,1-1s1,.448,1,1c0,2.209,1.791,4,4,4,.732,0,1.41-.211,2-.555v2.055c0,2.481-2.019,4.5-4.5,4.5ZM24,7.25c0,.455-.271.866-.689,1.045l-1.311.562v2.143c0,5.024-3.39,9.263-8,10.574v1.426c0,.552-.448,1-1,1s-1-.448-1-1v-1.051c-.33.03-.662.051-1,.051s-.67-.021-1-.051v1.051c0,.552-.448,1-1,1s-1-.448-1-1v-1.426c-1.717-.488-3.264-1.384-4.531-2.574h.031c3.59,0,6.5-2.91,6.5-6.5v-6.263C10,3.003,12.456.173,15.686.008c3.332-.17,6.1,2.381,6.296,5.627l1.329.57c.418.179.689.59.689,1.045Zm-6-1.75c0-.828-.672-1.5-1.5-1.5s-1.5.672-1.5,1.5.672,1.5,1.5,1.5,1.5-.672,1.5-1.5Z"/>
+            </svg>
             <h3>Para Passáros</h3>
             <p>Integer at faucibus urna. Nullam imperdiet.</p>
-        </div>
+        </a>
 
 
     </div>
