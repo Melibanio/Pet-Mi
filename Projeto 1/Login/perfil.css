@@ -1,0 +1,203 @@
+:root{
+    --verde: #455d43;
+    --olivia: #667d41;
+    --laranja: #f27a21;
+    --terra: #b43f1d;
+    --cobalto: #2a3691;
+    --azul: #4d61d4;
+    --branco: #fff;
+    --preto: #000;
+}
+
+*{
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none; border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+    
+
+}
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+section{
+     padding: 2rem 9%;
+
+}
+
+/*Menu simples login/cadastro para voltar ao home */
+header{
+    position: fixed;
+    top:0; left: 0; right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    background-color: #667d41;
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #fff;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header #toggler{
+    display: none;
+}
+
+.container {
+    display: flex;
+    align-items: stretch;
+    
+}
+
+main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    margin-top: 125px;
+    width: 250px;
+    height: 100vh;
+
+}
+
+section a  {
+    margin-left: 20px;
+    font-size: 2.3rem;
+    text-decoration: none;
+    color: #b43f1d;
+
+    
+}
+
+span {
+    margin-left: 20px;
+    font-size: 1.1rem;
+    color: #6d6c6c;
+    display: block;
+}
+
+aside {
+    margin-left: 250px;
+    min-height: 100px;
+    margin-top: 125px; 
+}
+
+.title {
+    margin-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 25px;
+    
+}
+
+hr {
+    width: 100%;
+    margin-top: 20px;
+}
+
+
+.nome {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+}
+.email {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+
+}
+.nascimento {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+    margin-left: 5px;
+
+
+}
+
+.favorito {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.produto {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.texto {
+    display: flex;
+    flex-direction: column; 
+    font-size: 1.5rem ;
+}
+
+.produto img {
+    width: 65px;
+    border-radius: 10px;
+}
+
+.preco {
+    color: #2a3691;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.icons {
+    display: flex;
+    gap: 10px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.status p {
+    font-size: 1.2rem;
+    background-color: #4d61d4;
+    color: #fff;
+    color: white;
+    padding: 10px;
+    border-radius: 20px;
+    text-decoration: none;
+    max-width: 65px;
+}
+
+
+.info  {
+    display: flex;
+    flex-direction: column; 
+    font-size: 1.3rem ;
+    text-align: right;
+
+   
+}
+
+.compra img {
+    width: 65px;
+    border-radius: 10px;
+    border: 1px solid #455d43;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: #667d41;
+    padding: 100px;
+    margin-top: 400px;
+}
+
+
+
+
