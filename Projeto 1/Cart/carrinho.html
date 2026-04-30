@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrinho de Compras</title>
+	<link rel="stylesheet" href="carrinho.css">
+</head>
+
+<body>
+	<div class="cart-container">
+		<h1>Meu Carrinho</h1>
+		<table class="cart-table">
+			<thead>
+				<tr>
+					<th>Produto</th>
+					<th>Qtd</th>
+					<th>Preço</th>
+					<th>Total</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<div class="product-info">
+							<img src="../Img/Produto.jpg" alt="Produto 1">
+							<span>Ração Premium 10kg</span>
+						</div>
+					</td>
+					<td>2</td>
+					<td>R$ 80,00</td>
+					<td>R$ 160,00</td>
+					<td><button class="remove-btn">Remover</button></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="product-info">
+							<img src="../Img/Produto.jpg" alt="Produto 2">
+							<span>Brinquedo para Cachorro</span>
+						</div>
+					</td>
+					<td>1</td>
+					<td>R$ 25,00</td>
+					<td>R$ 25,00</td>
+					<td><button class="remove-btn">Remover</button></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="product-info">
+							<img src="../Img/Produto.jpg" alt="Produto 1">
+							<span>Ração Premium 10kg</span>
+						</div>
+					</td>
+					<td>2</td>
+					<td>R$ 80,00</td>
+					<td>R$ 160,00</td>
+					<td><button class="remove-btn">Remover</button></td>
+			</tr>
+
+			</tbody>
+		</table>
+		<div class="cart-summary">
+			<span>Total do Carrinho:</span>
+			<span class="cart-total">R$ 185,00</span>
+		</div>
+		<button class="checkout-btn">Finalizar Compra</button>
+	</div>
+</body>
+<script src="carrinho.js"></script>
+
+</html>
