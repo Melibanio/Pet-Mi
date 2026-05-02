@@ -1,0 +1,335 @@
+:root{
+  --verde: #455d43;
+  --olivia: #667d41;
+  --laranja: #f27a21;
+  --terra: #b43f1d;
+  --cobalto: #2a3691;
+  --azul: #4d61d4;
+  --branco: #fff;
+  --preto: #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f8f5ef;
+  color: var(--preto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+  background: var(--verde);
+  color: var(--branco);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 60px;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: var(--laranja);
+}
+
+.nav {
+  display: flex;
+  gap: 24px;
+}
+
+.nav a {
+  color: var(--branco);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: var(--laranja);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--verde), var(--olivia));
+  color: var(--branco);
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+  padding: 70px 60px;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+  margin-bottom: 16px;
+}
+
+.hero-text p {
+  font-size: 20px;
+  max-width: 600px;
+  line-height: 1.5;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--laranja);
+  color: var(--branco);
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--terra);
+}
+
+.hero-card {
+  background: var(--branco);
+  color: var(--preto);
+  padding: 35px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+}
+
+.hero-card span {
+  font-size: 48px;
+}
+
+.hero-card h2 {
+  color: var(--verde);
+  margin: 18px 0 10px;
+}
+
+.hero-card p {
+  line-height: 1.5;
+}
+
+.sobre {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 35px;
+  padding: 70px 60px;
+}
+
+.sobre-texto,
+.sobre-box,
+.card,
+.formulario {
+  background: var(--branco);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.sobre h2,
+.diferenciais h2,
+.atendimento h2 {
+  color: var(--verde);
+  font-size: 34px;
+  margin-bottom: 18px;
+}
+
+.sobre-texto p {
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
+
+.sobre-box h3 {
+  color: var(--terra);
+  font-size: 24px;
+  margin-bottom: 18px;
+}
+
+.sobre-box ul {
+  padding-left: 20px;
+}
+
+.sobre-box li {
+  margin-bottom: 12px;
+}
+
+.diferenciais {
+  padding: 20px 60px 70px;
+  text-align: center;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.card span {
+  font-size: 44px;
+}
+
+.card h3 {
+  color: var(--olivia);
+  margin: 16px 0 10px;
+}
+
+.card p {
+  line-height: 1.5;
+}
+
+.atendimento {
+  background: var(--verde);
+  color: var(--branco);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 35px;
+  padding: 70px 60px;
+}
+
+.atendimento h2 {
+  color: var(--branco);
+}
+
+.atendimento-info p {
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.contatos {
+  background: rgba(255,255,255,0.12);
+  padding: 24px;
+  border-radius: 18px;
+  margin-top: 24px;
+}
+
+.contatos p {
+  margin-bottom: 12px;
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formulario h3 {
+  color: var(--verde);
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+}
+
+.formulario textarea {
+  min-height: 130px;
+  resize: none;
+}
+
+.formulario input:focus,
+.formulario textarea:focus {
+  border-color: var(--laranja);
+}
+
+.formulario button {
+  background: var(--laranja);
+  color: var(--branco);
+  border: none;
+  padding: 14px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background: var(--terra);
+}
+
+.faq {
+  padding: 70px 60px;
+  background: #f8f5ef;
+}
+
+.faq h2 {
+  color: var(--verde);
+  font-size: 34px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.faq-lista {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  gap: 18px;
+}
+
+.faq-item {
+  background: var(--branco);
+  border-left: 6px solid var(--laranja);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+}
+
+.faq-item h3 {
+  color: var(--verde);
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.faq-item p {
+  line-height: 1.6;
+  color: #333;
+}
+
+.footer {
+  background: var(--preto);
+  color: var(--branco);
+  text-align: center;
+  padding: 22px;
+}
+
+@media (max-width: 900px) {
+  .header {
+    flex-direction: column;
+    gap: 18px;
+    padding: 22px;
+  }
+
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero,
+  .sobre,
+  .atendimento {
+    grid-template-columns: 1fr;
+    padding: 40px 22px;
+  }
+
+  .hero-text h1 {
+    font-size: 38px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .diferenciais,
+  .faq {
+    padding: 40px 22px;
+  }
+}
