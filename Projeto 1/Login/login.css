@@ -1,4 +1,4 @@
-:root{
+:root {
     --verde: #455d43;
     --olivia: #667d41;
     --laranja: #f27a21;
@@ -9,106 +9,178 @@
     --preto: #000;
 }
 
-*{
-    margin: 0; padding: 0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    
+
 
 }
-html{
+
+
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+
 }
-section{
-     padding: 2rem 9%;
+
+
+section {
+    padding: 2rem 9%;
 
 }
 
 /*Menu simples login/cadastro para voltar ao home */
-header{
+header {
     position: fixed;
-    top:0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 2rem 9%;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    z-index: 1000;
     background-color: #667d41;
 }
 
-header .logo{
+header .logo {
     font-size: 3rem;
     color: #fff;
     font-weight: bolder;
     text-decoration: none;
 }
 
-
-
-
-header #toggler{
+header #toggler {
     display: none;
 }
 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    height: 100vh;
+    margin: 0;
+    background: #fff;
+
+}
+
+.login-container {
+    width: 550px;
+    margin: 0 auto;
+
+
+}
 
 .name {
     color: #f27a21;
     text-align: center;
-    margin-top: 150px;
+    font-weight: bolder;
+    margin-top: 120px;
+    margin-bottom: 15px;
     font-size: 4rem;
 }
 
-.login,
-.senha {
-    text-align: center;
-    margin-top: 30px;
-    font-size: 1.5rem;
+.login-container form {
+
+    padding: 14px;
+    border-radius: 20px;
+
 }
 
-.login input,
-.senha input {
-    width: 550px;
-    padding: 16px;
-    border: 1px solid #455d43 ;
-    border-radius: 16px;
+.login-container h2 {
+    margin-top: 8px;
+    margin-left: 25px;
+    font-size: 1.8rem;
+
 }
 
-.novaSenha {
-    text-align: center;
-    margin-top: 25px;
-    font-size: 1.2rem;
+hr {
+    width: 100%;
+    margin-top: 0;
+
 }
 
-.novaSenha a {
-    text-decoration: none;
+.login-container label {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    font-size: 1.3rem;
+    color: #505050;
+}
+
+.login-container input {
+    width: 95%;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    background: #ede9e9;
     color: #000;
+
 }
 
-.acesso {
+.senha {
+    text-align: right;
+    margin-right: 20px;
+}
+
+.senha a {
+    text-decoration: none;
+    color: #b43f1d;
+    transition: 0.3;
+    font-size: 1.2rem;
+
+}
+
+.senha a:hover {
+    color: #000;
+
+}
+
+.login-container button {
+    width: 95%;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 2rem;
     text-align: center;
-    margin-top: 35px;
-    font-size: 2.3rem;
+    background: #667d41;
+    color: #fff;
+
 }
 
-.acesso button {
-    width: 550px;
-    background-color: #667d41;
-    color: white;
-    padding: 16px;
-    border: 1px solid #455d43 ;
-    border-radius: 32px;
+.login-container button:hover {
+    background: #455d43;
 }
 
-.Cadastro, span {
-    text-align: center;
-    margin-top: 20px;
+.login-container p,
+button a {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
     font-size: 1.2rem;
 }
 
+.login-container a {
+    text-decoration: none;
+    color: #b43f1d;
+    transition: 0.3;
+
+}
+
+a:hover {
+    color: #000;
+
+}
