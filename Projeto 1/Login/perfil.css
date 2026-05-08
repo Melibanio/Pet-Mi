@@ -1,4 +1,4 @@
-:root{
+:root {
     --verde: #455d43;
     --olivia: #667d41;
     --laranja: #f27a21;
@@ -9,195 +9,144 @@
     --preto: #000;
 }
 
-*{
-    margin: 0; padding: 0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    outline: none; border: none;
+    outline: none;
+    border: none;
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-    
+
 
 }
-html{
+
+html {
     font-size: 62.5%;
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
 }
-section{
-     padding: 2rem 9%;
-
-}
 
 /*Menu simples login/cadastro para voltar ao home */
-header{
+header {
     position: fixed;
-    top:0; left: 0; right: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     padding: 2rem 9%;
     display: flex;
     justify-content: space-between;
     background-color: #667d41;
 }
 
-header .logo{
+header .logo {
     font-size: 3rem;
     color: #fff;
     font-weight: bolder;
     text-decoration: none;
 }
 
-header #toggler{
+header #toggler {
     display: none;
 }
 
-.container {
+body {
     display: flex;
-    align-items: stretch;
-    
+    background: #f5f5f5;
 }
 
-main {
+/* Menu lateral */
+nav {
+    display: flex;
+    flex-direction: column;
     position: fixed;
-    top: 0;
+    top: 90px;
     left: 0;
-    margin-top: 125px;
-    width: 250px;
-    height: 100vh;
-
+    width: 260px;
+    height: calc(100vh - 90px);
+    background: #b43f1d;
+    border-bottom-right-radius: 20px;
 }
 
-section a  {
-    margin-left: 20px;
-    font-size: 2.3rem;
-    text-decoration: none;
-    color: #b43f1d;
+nav img {
+    width: 145px;
+    border-radius: 80px;
+    margin-bottom: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 45px;
+}
 
-    
+nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 35px;
+    margin-top: 15px;
+    font-size: 1.8rem;
+}
+
+nav a:hover {
+    color: #f27a21;
+    transition: 0, 3;
 }
 
 span {
-    margin-left: 20px;
-    font-size: 1.1rem;
-    color: #6d6c6c;
-    display: block;
+    margin-left: 35px;
+    font-size: 1.3rem;
 }
 
-aside {
-    margin-left: 250px;
-    min-height: 100px;
-    margin-top: 125px; 
-}
-
-.title {
-    margin-left: 20px;
-    margin-top: 30px;
-    margin-bottom: 25px;
-    
-}
-
-hr {
+/* Conteudo */
+main {
+    margin-top: 90px;
+    margin-left: 260px;
     width: 100%;
-    margin-top: 20px;
 }
 
-
-.nome {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    margin-left: 5px;
-}
-.email {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    margin-left: 5px;
-
-
-}
-.nascimento {
-    font-size: 1.4rem;
-    margin-bottom: 10px;
-    margin-left: 5px;
-
-
-}
-
-.favorito {
+.perfil-container {
+    width: 100%;
+    min-height: 80vh;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #ccc;
-    padding: 10px 0;
+    flex-direction: column;
+    gap: 20px;
 }
 
-.produto {
-    display: flex;
-    gap: 10px;
-    align-items: center;
+.perfil-container h1 {
+    margin-left: 115px;
+    margin-top: 45px;
+    color: #f27a21;
 }
 
-.texto {
-    display: flex;
-    flex-direction: column; 
-    font-size: 1.5rem ;
-}
-
-.produto img {
-    width: 65px;
-    border-radius: 10px;
-}
-
-.preco {
-    color: #2a3691;
-    font-weight: bold;
+.perfil-container h2 {
+    margin-left: 120px;
     font-size: 1.5rem;
 }
 
-.icons {
-    display: flex;
-    gap: 10px;
-    font-size: 2rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-}
-
-.status p {
-    font-size: 1.2rem;
-    background-color: #4d61d4;
-    color: #fff;
-    color: white;
+.campo {
+    background: #ede9e9;
     padding: 10px;
+    border-radius: 15px;
+    margin-left: 120px;
+    width: 35%;    
+}
+
+.campo p {
+    font-size: 1.3rem;
+}
+
+.perfil-container button {
+    background-color: #f27a21;
+    width: 15%;
+    margin-left: auto;
+    margin-right: 370px;
     border-radius: 20px;
-    text-decoration: none;
-    max-width: 65px;
+    padding: 10px;
+    font-size: 1.6rem;
 }
 
-
-.info  {
-    display: flex;
-    flex-direction: column; 
-    font-size: 1.3rem ;
-    text-align: right;
-
-   
+.perfil-container button:hover {
+    background: #b43f1d;
+    color: #fff;
 }
-
-.compra img {
-    width: 65px;
-    border-radius: 10px;
-    border: 1px solid #455d43;
-}
-
-footer {
-    display: flex;
-    justify-content: space-between;
-    background-color: #667d41;
-    padding: 100px;
-    margin-top: 400px;
-}
-
-
-
-
