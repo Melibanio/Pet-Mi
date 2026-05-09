@@ -17,7 +17,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 
 
@@ -63,12 +62,12 @@ nav {
     display: flex;
     flex-direction: column;
     position: fixed;
-    top: 90px;
+    top: 75px;
     left: 0;
     width: 260px;
     height: calc(100vh - 90px);
     background: #b43f1d;
-    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 50px;
 }
 
 nav img {
@@ -80,6 +79,12 @@ nav img {
     margin-top: 45px;
 }
 
+nav hr {
+    border: 1px solid #fff;
+    width: 90%;
+    margin: 15px auto;
+}
+
 nav a {
     text-decoration: none;
     color: #fff;
@@ -89,33 +94,36 @@ nav a {
 }
 
 nav a:hover {
-    color: #f27a21;
-    transition: 0, 3;
+    color: #000;
+    transition: 0, 3s;
 }
 
 span {
     margin-left: 35px;
     font-size: 1.3rem;
+    color: #ccc;
 }
 
-/* Conteudo */
+/* Comeco Perfil */
 main {
-    margin-top: 90px;
+    margin-top: 85px;
     margin-left: 260px;
     width: 100%;
 }
 
 .perfil-container {
-    width: 100%;
-    min-height: 80vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    width: 100%;
+    min-height: 80vh;
 }
 
 .perfil-container h1 {
     margin-left: 115px;
     margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
     color: #f27a21;
 }
 
@@ -129,7 +137,9 @@ main {
     padding: 10px;
     border-radius: 15px;
     margin-left: 120px;
-    width: 35%;    
+    margin-bottom: 15px;
+    width: 35%;
+
 }
 
 .campo p {
@@ -137,16 +147,92 @@ main {
 }
 
 .perfil-container button {
-    background-color: #f27a21;
-    width: 15%;
-    margin-left: auto;
-    margin-right: 370px;
+    background-color: #ccc;
+    width: 200px;
+    margin-left: 120px;
     border-radius: 20px;
     padding: 10px;
     font-size: 1.6rem;
+    cursor: pointer;
 }
+
 
 .perfil-container button:hover {
     background: #b43f1d;
     color: #fff;
+}
+
+
+main hr {
+    border: 1px solid #f27a21;
+    width: 90%;
+    margin: 45px auto;
+
+}
+
+/* Comeco do Favoritos*/
+.favoritos-container {
+    width: 100%;
+}
+
+.favoritos-container .campo {
+    display: flex;
+    gap: 20px;
+    padding: 0 115px;
+    align-items: flex-start;
+    background-color: #f5f5f5;
+    margin: 0;
+}
+
+.favoritos-container h1 {
+    margin-left: 115px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #f27a21;
+}
+
+.produtos {
+    background: #fff;
+    width: 200px;
+    padding: 15px;
+    border-radius: 20px;
+    height: 55vh;
+    flex: none;
+}
+
+.produtos img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.produtos p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+}
+
+.acoes {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.acoes button {
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.6rem;
+    border: none;
+}
+
+.acoes button:hover {
+    background: #f27a21;
+}
+
+.acoes button:hover i {
+    color: #fff;
+}
+
+.favorito i {
+    color: #b43f1d;
 }
