@@ -53,7 +53,7 @@ header #toggler {
 }
 
 body {
-    display: flex;
+   
     background: #f5f5f5;
 }
 
@@ -65,9 +65,11 @@ nav {
     top: 75px;
     left: 0;
     width: 260px;
-    height: calc(100vh - 90px);
+    min-height: 87vh;
     background: #b43f1d;
     border-bottom-left-radius: 50px;
+    overflow-y: auto;
+
 }
 
 nav img {
@@ -77,6 +79,7 @@ nav img {
     margin-left: auto;
     margin-right: auto;
     margin-top: 45px;
+
 }
 
 nav hr {
@@ -108,7 +111,13 @@ span {
 main {
     margin-top: 85px;
     margin-left: 260px;
-    width: 100%;
+}
+
+main hr {
+    border: 1px solid #f27a21;
+    width: 90%;
+    margin: 45px auto;
+
 }
 
 .perfil-container {
@@ -162,13 +171,6 @@ main {
     color: #fff;
 }
 
-
-main hr {
-    border: 1px solid #f27a21;
-    width: 90%;
-    margin: 45px auto;
-
-}
 
 /* Comeco do Favoritos*/
 .favoritos-container {
@@ -235,4 +237,74 @@ main hr {
 
 .favorito i {
     color: #b43f1d;
+}
+
+/* Comeco pedidos */
+
+.pedido-container {
+    width: 100%;
+    margin-bottom: 150px;
+}
+
+.pedido-container h1 {
+    margin-left: 115px;
+    margin-top: 45px;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: #f27a21;
+}
+
+.pedido-container h2 {
+    width: 170px;
+    border-radius: 10px;
+    padding: 8px;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #2a3691;
+    background-color: #4d61d4;
+ 
+    
+}
+
+.pedido-container .linhap hr {
+    border: 1px solid #ccc;
+    width: 100%;
+    margin: 15px auto;
+
+}
+
+.pedido-container .campo {
+    width: 80%;
+    padding: 20px; 
+    margin-left: 115px;
+}
+.pedido-container .pedido {
+    display: flex;
+    gap: 15px;
+}
+
+.pedido-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    
+}
+.pedido-container  .texto {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: right;
+    font-size: 1.4rem;
+    margin-top: auto;
+    gap: 5px;
+
+}
+
+footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    background: #667d41;
+    height: 50vh;
+    color: #ccc;
 }
