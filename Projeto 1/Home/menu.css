@@ -7,6 +7,7 @@
     --azul: #4d61d4;
     --branco: #fff;
     --preto: #000;
+    --cinza: #666;
 }
 
 *{
@@ -96,6 +97,8 @@ header #toggler{
     display: none;
 }
 
+/* Banner */
+
 .banner {
     min-height: 100vh;
     background: url('/Img/banner.png')center/cover no-repeat;
@@ -135,6 +138,8 @@ header #toggler{
 
     animation: entrarCoelho 1.5s ease-out forwards;
 }
+
+/* Cupom */
 
 .btn{
     display: inline-block;
@@ -202,9 +207,11 @@ header #toggler{
     text-decoration: none;
 }
 
+/* Categorias */
+
 .categorias{
     padding: 5rem 9%;
-    background: white;
+    background: var(--branco);
     text-align: center;
 }
 
@@ -221,7 +228,7 @@ header #toggler{
 .linha{
     width: 60px;
     height: 4px;
-    background: orange;
+    background: var(--laranja);
     margin: 1rem auto 3rem;
     border-radius: 2px;
 }
@@ -235,7 +242,7 @@ header #toggler{
 
 /* CARD INDIVIDUAL */
 .card{
-    background: #eee;
+    background: var(--branco);
     padding: 3rem 2rem;
     border-radius: 20px;
     width: 240px;
@@ -255,7 +262,7 @@ header #toggler{
 /* ÍCONE */
 .card i{
     font-size: 6rem;
-    color: orange;
+    color: var(--terra);
     margin-bottom: 1rem;
     display: block;    
 }
@@ -263,18 +270,13 @@ header #toggler{
 .card svg{
     width: 6rem;           
     height: 6rem;
-    fill: orange;          
+    fill: var(--terra);          
     margin-bottom: 1rem;
     display: block;        
-    margin-left: auto;     /* ← centraliza horizontalmente */
+    margin-left: auto;     /* centraliza horizontalmente */
     margin-right: auto;
 }
 
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    background: #e0e0e0; 
-}
 
 /* TEXTO */
 .card h3{
@@ -289,7 +291,486 @@ header #toggler{
 
 .card:hover{
     transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+
+
+/* PRODUTOS*/
+.produtos{
+    padding: 5rem 9%;
+    background: #f8f8f8;
+    text-align: center;
+}
+
+/* TÍTULO */
+.melhores h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: var(--preto); 
+}
+
+.melhores p{
+    font-size: 1.4rem;
+    color: var(--preto);
+    margin-bottom: 1rem;
+}
+
+.linha{
+    width: 60px;
+    height: 4px;
+    background: var(--laranja);
+    margin: 1rem auto 3rem;
+    border-radius: 2px;
+}
+
+/* GRID DOS CARDS */
+.cart{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+/* CARD INDIVIDUAL */
+.products{
+    background: #fff;
+    width: 320px;
+    min-height: 420px;
+
+    padding: 2rem 1.5rem;
+    border-radius: 25px;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    text-align: center;
+
+    border: 1px solid #e5e5e5;
+
+    transition: 0.3s ease;
+}
+
+.products:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* BADGE */
+.vendas{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+    background: var(--laranja);
+    color: var(--branco);
+
+    font-size: 1rem;
+    font-weight: bold;
+
+    padding: .4rem 1rem;
+    border-radius: 30px;
+}
+
+/* IMAGEM */
+.produto{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.produto img{
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+
+    margin: 1.5rem 0;
+    border-radius: 15px;
+}
+
+/* TEXTO */
+.products h3{
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: .5rem;
+}
+
+.products p{
+    font-size: 1.3rem;
+    color: #777;
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* PREÇO */
+.price{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--verde);
+    margin-bottom: 1.5rem;
+}
+
+/* BOTÃO */
+.add{
+    width: 100%;
+
+    padding: 1rem;
+    border: none;
+    border-radius: 40px;
+
+    background: var(--olivia);
+    color: #fff;
+
+    font-size: 1.3rem;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: 0.3s ease;
+}
+
+.add:hover{
+    background: var(--verde);
+    transform: scale(1.03);
+}
+
+.add:active{
+    transform: scale(.98);
+}
+
+/*SOBRE NÓS */
+
+.sobrenos{
+    min-height: 80vh;
+    padding: 8rem 9%;
+    
+    /* imagem de fundo */
+    background: linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.55)
+    ),
+    url('/Img/sobrenos.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+
+    position: relative;
+}
+
+/* título central */
+.sobre{
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.sobre h1{
+    font-size: 4.2rem;
+    color: var(--branco);
+    margin-bottom: 1rem;
+}
+
+.sobre p{
+    font-size: 1.7rem;
+    color: #eee;
+}
+
+.linha{
+    width: 12rem;
+    height: .4rem;
+    background: var(--laranja);
+    margin: 1.5rem auto;
+    border-radius: 5rem;
+}
+
+/* caixa do texto */
+.about{
+    width: 100%;
+    max-width: 55rem;
+
+    background: rgba(255,255,255,.12);
+    backdrop-filter: blur(8px);
+
+    padding: 4rem;
+    border-radius: 2rem;
+
+    border: .1rem solid rgba(255,255,255,.2);
+
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.35);
+
+    text-align: left;
+}
+
+/* textos */
+.about span{
+    color: var(--laranja);
+    font-size: 1.5rem;
+    font-weight: bold;
+    letter-spacing: .1rem;
+}
+
+.about h3{
+    font-size: 4rem;
+    color: var(--branco);
+    margin: 1rem 0 2rem;
+}
+
+.about p{
+    font-size: 1.7rem;
+    color: #f1f1f1;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+}
+
+/* botão */
+.about button{
+    padding: 1.3rem 3.5rem;
+    background: var(--laranja);
+    color: var(--branco);
+    font-size: 1.6rem;
+    border-radius: 5rem;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.about button:hover{
+    background: var(--terra);
+    transform: translateY(-4px);
+}
+
+/* =========================
+   CARROSSEL
+========================= */
+
+.caroussel{
+    padding: 7rem 8%;
+    background: var(--cobalto);
+}
+
+.carrossel{
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.carrossel h1{
+    font-size: 4rem;
+    color: var(--branco);
+    margin-bottom: 1rem;
+}
+
+.carrossel p{
+    font-size: 1.6rem;
+    color: #f1f1f1;
+}
+
+/* estrutura */
+.carousel-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.carousel{
+    overflow: hidden;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* trilho */
+.carousel-track{
+    display: flex;
+    gap: 2rem;
+    padding: 1rem;
+    transition: transform .5s ease;
+}
+
+/* cards menores */
+.card{
+    min-width: 23rem;
+    max-width: 15rem;
+
+    background: var(--branco);
+    border-radius: 1.8rem;
+    overflow: hidden;
+
+    text-decoration: none;
+
+    box-shadow: 0 .5rem 2rem rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 1rem 2.5rem rgba(0,0,0,.15);
+}
+
+/* imagem menor */
+.card img{
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+/* texto */
+.card-title{
+    display: block;
+    padding: 1.8rem;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+
+    color: var(--verde);
+    text-align: center;
+}
+
+.card:hover .card-title{
+    color: var(--laranja);
+}
+
+/* botões */
+.carousel-btn{
+    width: 5rem;
+    height: 5rem;
+
+    border-radius: 50%;
+
+    background: var(--verde);
+    color: var(--branco);
+
+    font-size: 2rem;
+    cursor: pointer;
+
+    box-shadow: 0 .3rem 1rem rgba(0,0,0,.2);
+}
+
+.carousel-btn:hover{
+    background: var(--laranja);
+    transform: scale(1.1)
+}
+
+/* Assinatura do blog */
+.jornal{
+    background: var(--laranja);
+
+    padding: 8rem 9%;
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+/* caixa interna */
+.assinantes{
+    max-width: 110rem;
+    margin: auto;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 4rem;
+}
+
+/* conteúdo */
+.assinantes .conteudo{
+    max-width: 55rem;
+    z-index: 2;
+}
+
+/* título */
+.assinantes h3{
+    font-size: 4.5rem;
+    color: var(--branco);
+
+    margin-bottom: 2rem;
+}
+
+/* texto */
+.assinantes p{
+    font-size: 1.8rem;
+    color: var(--branco);
+
+    line-height: 1.8;
+
+    margin-bottom: 3rem;
+}
+
+/* formulário */
+.assinantes form{
+    display: flex;
+    align-items: center;
+
+    gap: 1.5rem;
+
+    flex-wrap: wrap;
+}
+
+/* input */
+.assinantes input{
+    width: 100%;
+    max-width: 38rem;
+
+    padding: 1.6rem 2rem;
+
+    border-radius: 5rem;
+
+    font-size: 1.6rem;
+
+    background: var(--branco);
+    color: var(--preto);
+}
+
+/* botão */
+.assinantes button{
+    padding: 1.6rem 3rem;
+
+    border-radius: 5rem;
+
+    background: var(--verde);
+
+    color: var(--branco);
+
+    font-size: 1.6rem;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.assinantes button:hover{
+    background: var(--cobalto);
+
+    transform: translateY(-3px);
+}
+
+/* imagem do gato */
+.assinantes img{
+    position: absolute;
+
+    right: -2rem;
+    bottom: 0;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    opacity: .18;
+
+    z-index: 1;
 }
 
 
@@ -298,6 +779,103 @@ header #toggler{
 
 
 
+
+
+
+
+
+
+
+
+/*Responsivo da página*/
+@media (max-width: 768px){
+
+    .produtos{
+        padding: 4rem 5%;
+    }
+
+    .products{
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .melhores h1{
+        font-size: 2.5rem;
+    }
+}
+@media(max-width: 991px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .sobrenos{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about{
+        text-align: center;
+    }
+
+    .carousel-track{
+        gap: 2rem;
+    }
+
+    .card{
+        min-width: 26rem;
+    }
+}
+
+@media(max-width: 768px){
+
+    .carousel-btn{
+        display: none;
+    }
+
+    .card{
+        min-width: 100%;
+    }
+
+    .about h3{
+        font-size: 3rem;
+    }
+}
+
+@media(max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .melhores h1,
+    .carrossel h1{
+        font-size: 3.2rem;
+    }
+
+    .about{
+        padding: 3rem 2rem;
+    }
+}
+@media(max-width:768px){
+
+    .assinantes{
+        padding: 4rem 2rem;
+    }
+
+    .assinantes h3{
+        font-size: 3rem;
+    }
+
+    .assinantes form{
+        flex-direction: column;
+    }
+
+    .assinantes button{
+        width: 100%;
+        max-width: 40rem;
+    }
+}
 
 
 
