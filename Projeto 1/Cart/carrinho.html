@@ -8,7 +8,102 @@
 	<link rel="stylesheet" href="carrinho.css">
 </head>
 
+<body><!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Carrinho de Compras</title>
+	<link rel="stylesheet" href="carrinho.css">
+</head>
+
 <body>
+	<div class="menu-placeholder">Menu Futuro</div>
+	<div class="background-section">
+		<div class="cart-container">
+			<h1>Meu Carrinho</h1>
+			<div class="empty-message">Ainda não foi colocado nada no carrinho</div>
+		
+		<table class="cart-table" style="display: none;">
+			<thead>
+				<tr>
+					<th>Produto</th>
+					<th>Qtd</th>
+					<th>Preço</th>
+					<th>Total</th>
+					<th></th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		
+		<!-- Caixa de Endereço -->
+		<div class="address-box" style="display: none;">
+			<h3>Informações de Entrega</h3>
+			<form id="addressForm">
+				<div class="form-group">
+					<label for="city">Cidade:</label>
+					<input type="text" id="city" name="city" placeholder="Digite sua cidade" required>
+				</div>
+				<div class="form-group">
+					<label for="address">Endereço:</label>
+					<input type="text" id="address" name="address" placeholder="Digite seu endereço" required>
+				</div>
+				<div class="form-group">
+					<label for="houseNumber">Número da Casa:</label>
+					<input type="text" id="houseNumber" name="houseNumber" placeholder="Digite o número" required>
+				</div>
+			</form>
+			<button id="showDeliveryBtn" class="delivery-btn" disabled>Escolher Forma de Entrega</button>
+		</div>
+		
+		<!-- Opções de Entrega -->
+		<div id="deliveryOptions" class="delivery-options" style="display: none;">
+			<h3>Formas de Entrega</h3>
+			<div class="delivery-list">
+				<label class="delivery-item">
+					<input type="radio" name="delivery" value="agendada" data-price="20">
+					<span class="delivery-name">Entrega Agendada</span>
+					<span class="delivery-price">R$ 20,00</span>
+				</label>
+				<label class="delivery-item">
+					<input type="radio" name="delivery" value="sedex" data-price="17">
+					<span class="delivery-name">Sedex</span>
+					<span class="delivery-price">R$ 17,00</span>
+				</label>
+				<label class="delivery-item">
+					<input type="radio" name="delivery" value="motoboy" data-price="33">
+					<span class="delivery-name">Motoboy</span>
+					<span class="delivery-price">R$ 33,00</span>
+				</label>
+			</div>
+		</div>
+		
+		<div class="cart-summary">
+			<div class="summary-item">
+				<span>Subtotal:</span>
+				<span class="subtotal">R$ 0,00</span>
+			</div>
+			<div class="summary-item">
+				<span>Entrega:</span>
+				<span class="delivery-cost">R$ 0,00</span>
+			</div>
+			<div class="summary-item total">
+				<span>Total do Carrinho:</span>
+				<span class="cart-total">R$ 0,00</span>
+			</div>
+		</div>
+		<button class="checkout-btn">Finalizar Compra</button>
+		</div>
+	</div>
+	<div class="menu-placeholder">Menu Futuro</div>
+</body>
+<script src="carrinho.js"></script>
+
+</html>
+
 	<div class="cart-container">
 		<h1>Meu Carrinho</h1>
 		<table class="cart-table">
