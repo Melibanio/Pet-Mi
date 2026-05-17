@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar senha</title>
+    <link rel="stylesheet" href="esqueciSenha.css">
+</head>
+<body>
+
+      <header>
+        <!--Menu simples login/cadastro para voltar ao home-->
+        <a href="/Home/menu.html" class="logo">PET&MI</a>
+    </header>
+
+    <main class="esqueciSenha-container">
+        <h1>Esqueci minha senha</h1>
+        <form action="Recuperar"> 
+            
+            <label for="senha">Nova senha</label>
+            <input type="password" id="senha" placeholder="Digite a nova senha" required>
+
+            <label for="confirmar">Confirmar senha</label>
+            <input type="password" id="confirmar" placeholder="Confirme a senha" required>
+            <button type="submit"> 
+                Salvar
+            </button>
+
+        </form>
+
+    </main>
+    <script src="esqueciSenha.js"></script>
+    
+</body>
+</html>
