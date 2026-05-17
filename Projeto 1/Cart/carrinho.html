@@ -8,16 +8,6 @@
 	<link rel="stylesheet" href="carrinho.css">
 </head>
 
-<body><!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Carrinho de Compras</title>
-	<link rel="stylesheet" href="carrinho.css">
-</head>
-
 <body>
 	<div class="menu-placeholder">Menu Futuro</div>
 	<div class="background-section">
@@ -98,71 +88,71 @@
 		<button class="checkout-btn">Finalizar Compra</button>
 		</div>
 	</div>
+
+	<!-- SEÇÃO DE PRODUTOS FAVORITOS -->
+	<div class="favoritos-section">
+		<h2>Produtos Favoritos da Semana</h2>
+		<div class="favoritos-grid">
+			<!-- Produto 1 -->
+			<div class="favorito-card">
+				<div class="favorito-imagem">
+					<img src="../Img/produto1.png" alt="Ração Premium">
+				</div>
+				<h3>Ração Premium 12kg</h3>
+				<p>Nutrição completa para cães adultos</p>
+				<div class="favorito-preco">R$ 129,90</div>
+				<button class="favorito-btn" onclick="adicionarAoCarrinho('Ração Premium 12kg','129,90','../Img/produto1.png')">Adicionar ao Carrinho</button>
+			</div>
+
+			<!-- Produto 2 -->
+			<div class="favorito-card">
+				<div class="favorito-imagem">
+					<img src="../Img/produto1.png" alt="Coleira">
+				</div>
+				<h3>Coleira Zee.Dog P</h3>
+				<p>Pescoço até 36cm - Design moderno</p>
+				<div class="favorito-preco">R$ 69,90</div>
+				<button class="favorito-btn" onclick="adicionarAoCarrinho('Coleira Zee.Dog P','69,90','../Img/produto1.png')">Adicionar ao Carrinho</button>
+			</div>
+
+			<!-- Produto 3 -->
+			<div class="favorito-card">
+				<div class="favorito-imagem">
+					<img src="../Img/produto1.png" alt="Brinquedo">
+				</div>
+				<h3>Mordedor Kong Classic</h3>
+				<p>Alta durabilidade - Indicado para filhotes</p>
+				<div class="favorito-preco">R$ 89,90</div>
+				<button class="favorito-btn" onclick="adicionarAoCarrinho('Mordedor Kong Classic','89,90','../Img/produto1.png')">Adicionar ao Carrinho</button>
+			</div>
+
+			<!-- Produto 4 -->
+			<div class="favorito-card">
+				<div class="favorito-imagem">
+					<img src="../Img/produto1.png" alt="Cama">
+				</div>
+				<h3>Cama Baw Waw M</h3>
+				<p>Espuma de qualidade - Confortável</p>
+				<div class="favorito-preco">R$ 129,90</div>
+				<button class="favorito-btn" onclick="adicionarAoCarrinho('Cama Baw Waw M','129,90','../Img/produto1.png')">Adicionar ao Carrinho</button>
+			</div>
+
+			<!-- Produto 5 -->
+			<div class="favorito-card">
+				<div class="favorito-imagem">
+					<img src="../Img/produto1.png" alt="Shampoo">
+				</div>
+				<h3>Shampoo Sanol Dog</h3>
+				<p>Pelos macios e brilhantes - 500ml</p>
+				<div class="favorito-preco">R$ 29,90</div>
+				<button class="favorito-btn" onclick="adicionarAoCarrinho('Shampoo Sanol Dog','29,90','../Img/produto1.png')">Adicionar ao Carrinho</button>
+			</div>
+		</div>
+	</div>
+
 	<div class="menu-placeholder">Menu Futuro</div>
 </body>
 <script src="carrinho.js"></script>
 
 </html>
-
-	<div class="cart-container">
-		<h1>Meu Carrinho</h1>
-		<table class="cart-table">
-			<thead>
-				<tr>
-					<th>Produto</th>
-					<th>Qtd</th>
-					<th>Preço</th>
-					<th>Total</th>
-					<th></th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>
-						<div class="product-info">
-							<img src="../Img/Produto.jpg" alt="Produto 1">
-							<span>Ração Premium 10kg</span>
-						</div>
-					</td>
-					<td>2</td>
-					<td>R$ 80,00</td>
-					<td>R$ 160,00</td>
-					<td><button class="remove-btn">Remover</button></td>
-				</tr>
-				<tr>
-					<td>
-						<div class="product-info">
-							<img src="../Img/Produto.jpg" alt="Produto 2">
-							<span>Brinquedo para Cachorro</span>
-						</div>
-					</td>
-					<td>1</td>
-					<td>R$ 25,00</td>
-					<td>R$ 25,00</td>
-					<td><button class="remove-btn">Remover</button></td>
-				</tr>
-				<tr>
-					<td>
-						<div class="product-info">
-							<img src="../Img/Produto.jpg" alt="Produto 1">
-							<span>Ração Premium 10kg</span>
-						</div>
-					</td>
-					<td>2</td>
-					<td>R$ 80,00</td>
-					<td>R$ 160,00</td>
-					<td><button class="remove-btn">Remover</button></td>
-			</tr>
-
-			</tbody>
-		</table>
-		<div class="cart-summary">
-			<span>Total do Carrinho:</span>
-			<span class="cart-total">R$ 185,00</span>
-		</div>
-		<button class="checkout-btn">Finalizar Compra</button>
-	</div>
-</body>
-<script src="carrinho.js"></script>
-
-</html>
+//

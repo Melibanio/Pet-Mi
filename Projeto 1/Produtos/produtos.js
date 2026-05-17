@@ -57,17 +57,20 @@ function atualizarBadge(){
 // Salva no localStorage e atualiza o badge.
 // =============================================
 function adicionarAoCarrinho(nome, preco){
+    // aceita preço no formato string "129,90" ou número
+    const precoNum = typeof preco === 'string'
+        ? parseFloat(preco.replace(/\./g,'').replace(',','.'))
+        : Number(preco);
+
     const idx = carrinho.findIndex(i => i.nome === nome);
     if(idx >= 0){
-        // Produto já existe no carrinho — aumenta a quantidade
         carrinho[idx].qtd++;
     } else {
-        // Produto novo — adiciona ao carrinho
-        carrinho.push({ nome, preco, qtd: 1 });
+        carrinho.push({ nome, preco: precoNum, qtd: 1, imagem: '../Img/produto1.png' });
     }
     salvarCarrinho();
     atualizarBadge();
-    mostrarNotificacao(`"${nome}" adicionado ao carrinho!`);
+    mostrarNotificacao(`\"${nome}\" adicionado ao carrinho!`);
 }
 
 
@@ -526,7 +529,7 @@ function mostrarProdutos(cat, sub){
 
             <!-- Imagem do produto -->
             <div class="imagem-produto">
-                <img src="/img/produto1.png" alt="${item[0]}">
+                <img src="../Img/produto1.png" alt="${item[0]}">
             </div>
 
             <!-- Nome do produto -->
@@ -542,7 +545,7 @@ function mostrarProdutos(cat, sub){
             <div class="info">
                 <span>R$ ${item[2]}</span>
                 <button
-                    onclick="adicionarAoCarrinho('${item[0].replace(/'/g,"\\'")}','${item[2]}')"
+                    onclick="adicionarAoCarrinho('${item[0].replace(/'/g,"\\'")}','${item[2]}','../Img/produto1.png')"
                     title="Adicionar ao carrinho">
                     ${svgCarrinho}
                 </button>
