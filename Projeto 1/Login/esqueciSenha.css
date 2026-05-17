@@ -1,0 +1,118 @@
+:root {
+    --verde: #455d43;
+    --olivia: #667d41;
+    --laranja: #f27a21;
+    --terra: #b43f1d;
+    --cobalto: #2a3691;
+    --azul: #4d61d4;
+    --branco: #fff;
+    --preto: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+/* Menu simples para voltar ao home */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 9%;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--olivia);
+}
+
+header .logo {
+    font-size: 3rem;
+    color: var(--branco);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+header #toggler {
+    display: none;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--branco);
+    margin: 0;
+}
+
+.esqueciSenha-container {
+    width: 550px;
+    margin: 0 auto;
+}
+
+.esqueciSenha-container form {
+    padding: 14px;
+    border-radius: 20px;
+}
+
+.esqueciSenha-container h1 {
+    margin-bottom: 10px;
+    margin-left: 25px;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.esqueciSenha-container label {
+    margin-top: 10px;
+    margin-left: 25px;
+    display: flex;
+    font-size: 1.3rem;
+    color: #505050;
+}
+
+.esqueciSenha-container input {
+    width: 95%;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 12px;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    background: #ede9e9;
+    color: var(--preto);
+    border: 1px solid #ddd;
+}
+
+.esqueciSenha-container button {
+    width: 95%;
+    margin-top: 30px;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    padding: 14px;
+    border-radius: 25px;
+    font-size: 2rem;
+    text-align: center;
+    background: var(--olivia);
+    color: var(--branco);
+    cursor: pointer;
+}
+
+.esqueciSenha-container button:hover {
+    background: var(--verde);
+}
+
