@@ -189,16 +189,16 @@ button a {
 /* CSS do cadastro */
 .cadastro-container {
     display: flex;
-    gap: 170px;
+    gap: 330px;
 }
 
 .cadastro-container form {
-    margin-left: 90px;
+    margin-left: 450px;
     margin-top: 175px;
     border-radius: 20px;
     width: 100%;
     max-width: 550px;
-    height: 80vh;
+    height: 60vh;
     background: #ede9e9;   
 }
 
@@ -268,8 +268,21 @@ button a {
 }
 
 .imagem img {
+    display: flex;
     width: 100%;
-    max-width: 400px;
-    margin-top: 350px;
-    margin-right: 450px;
+    right: 0;
+    height: 91vh;
+    margin-top: 85px;
+    margin-left: 0;
+
+    -webkit-mask-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );
+    mask-image: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 1),
+        rgba(0, 0, 0, 0)
+    );    
 }
