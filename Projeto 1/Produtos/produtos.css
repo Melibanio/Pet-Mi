@@ -1,9 +1,4 @@
-/* =============================================
-   RESET GERAL
-   Zera margens e espaçamentos padrão
-   do navegador em todos os elementos.
-   Não altere este bloco.
-============================================= */
+/* reset */
 *{
     margin: 0;
     padding: 0;
@@ -11,14 +6,7 @@
 }
 
 
-/* =============================================
-   VARIÁVEIS DE COR E ESTILO
-   Altere aqui para mudar as cores do site inteiro.
-   --cobalt        → cor principal do fundo (azul cobalto)
-   --laranja       → cor dos botões e destaques
-   --verde         → cor do botão de adicionar ao carrinho
-   --radius        → arredondamento dos cantos dos cards
-============================================= */
+/* variáveis */
 :root{
     --cobalt:        #0047AB;
     --cobalt-dark:   #003080;
@@ -43,13 +31,7 @@
 }
 
 
-/* =============================================
-   CORPO DA PÁGINA
-   Fonte, cor de fundo e altura mínima.
-   Para trocar a fonte, altere font-family.
-   Para trocar as cores do fundo, altere
-   os valores dentro de linear-gradient.
-============================================= */
+/* corpo */
 body{
     font-family: 'Nunito', Arial, sans-serif;
     background: linear-gradient(
@@ -64,12 +46,7 @@ body{
 }
 
 
-/* =============================================
-   CABEÇALHO (TOPO DO SITE)
-   Faixa fixada no topo com logo e carrinho.
-   Para mudar a altura, altere: height
-   Para mudar a cor de fundo, altere: background
-============================================= */
+/* cabeçalho */
 header{
     width: 100%;
     height: 68px;
@@ -82,7 +59,6 @@ header{
     z-index: 100;
 }
 
-/* Área interna do cabeçalho — centraliza o conteúdo */
 .header-inner{
     max-width: 1400px;
     margin: 0 auto;
@@ -93,11 +69,7 @@ header{
     justify-content: space-between;
 }
 
-/* =============================================
-   LOGO / NOME DO SITE
-   Para mudar o tamanho do texto, altere: font-size
-   A cor do trecho "&Mi" é controlada por .logo span
-============================================= */
+/* logo — todo branco, sem cor no &MI */
 .logo{
     font-size: 24px;
     font-weight: 800;
@@ -106,18 +78,13 @@ header{
     white-space: nowrap;
 }
 
-/* Cor da segunda parte do logo (&Mi) */
+/* &MI também branco agora */
 .logo span{
-    color: var(--laranja);
+    color: var(--branco);
 }
 
 
-/* =============================================
-   BOTÃO DO CARRINHO NO CABEÇALHO
-   Visual apenas — sem funcionalidade.
-   Para mudar a cor, altere: background
-   Para mudar o texto, edite no arquivo HTML
-============================================= */
+/* botão do carrinho */
 .btn-carrinho-header{
     display: flex;
     align-items: center;
@@ -133,15 +100,15 @@ header{
     font-family: 'Nunito', sans-serif;
     transition: 0.25s;
     white-space: nowrap;
+    text-decoration: none;
 }
 
-/* Efeito ao passar o mouse no botão do carrinho */
 .btn-carrinho-header:hover{
     background: var(--laranja-hover);
     transform: scale(1.04);
 }
 
-/* Bolinha com número de itens no carrinho */
+/* badge com número de itens */
 .badge-count{
     background: white;
     color: var(--laranja);
@@ -157,12 +124,7 @@ header{
 }
 
 
-/* =============================================
-   CONTAINER PRINCIPAL
-   Envolve o menu lateral e a área de produtos.
-   Para mudar o espaçamento interno, altere: padding
-   Para mudar o espaço entre menu e produtos, altere: gap
-============================================= */
+/* container principal */
 .container{
     display: flex;
     gap: 24px;
@@ -173,12 +135,7 @@ header{
 }
 
 
-/* =============================================
-   MENU LATERAL DE CATEGORIAS
-   Painel à esquerda com as categorias de animais.
-   Para mudar a largura, altere: width e min-width
-   Para mudar a cor de fundo, altere: background
-============================================= */
+/* menu lateral */
 .categorias{
     width: 220px;
     min-width: 220px;
@@ -193,7 +150,6 @@ header{
     top: 88px;
 }
 
-/* Título "CATEGORIAS" acima da lista */
 .categorias h2{
     font-size: 11px;
     font-weight: 800;
@@ -204,7 +160,6 @@ header{
     padding-left: 4px;
 }
 
-/* Lista de categorias */
 .categorias ul{
     list-style: none;
     display: flex;
@@ -212,12 +167,7 @@ header{
     gap: 5px;
 }
 
-/* =============================================
-   CADA ITEM DE CATEGORIA (NORMAL)
-   Estilo padrão de cada botão de categoria.
-   Para mudar tamanho do texto, altere: font-size
-   Para mudar o espaçamento interno, altere: padding
-============================================= */
+/* item de categoria */
 .categorias li{
     display: flex;
     align-items: center;
@@ -233,7 +183,6 @@ header{
     user-select: none;
 }
 
-/* Efeito ao passar o mouse em uma categoria */
 .categorias li:hover{
     background: rgba(255,255,255,0.14);
     color: white;
@@ -241,11 +190,7 @@ header{
     transform: translateX(4px);
 }
 
-/* =============================================
-   CATEGORIA ATIVA (SELECIONADA)
-   Estilo do item que está clicado/ativo.
-   Para mudar a cor de destaque, altere: background
-============================================= */
+/* categoria ativa */
 .categorias li.ativo{
     background: var(--laranja);
     color: white;
@@ -255,7 +200,6 @@ header{
     transform: translateX(0);
 }
 
-/* Ícone de cada categoria */
 .cat-icon{
     opacity: 0.75;
     display: flex;
@@ -269,22 +213,13 @@ header{
 }
 
 
-/* =============================================
-   ÁREA PRINCIPAL DE PRODUTOS
-   Ocupa todo o espaço restante ao lado do menu.
-   Contém título, subcategorias e cards.
-============================================= */
+/* área de produtos */
 .produtos{
     flex: 1;
     min-width: 0;
 }
 
-/* =============================================
-   TÍTULO DA CATEGORIA SELECIONADA
-   Ex: "Tudo para seu Cachorro"
-   Para mudar o tamanho, altere: font-size
-   Para mudar a cor, altere: color
-============================================= */
+/* título da categoria */
 .titulo-categoria{
     font-size: 26px;
     font-weight: 800;
@@ -294,11 +229,7 @@ header{
 }
 
 
-/* =============================================
-   BOTÕES DE SUBCATEGORIA
-   Ex: Ração, Coleiras, Brinquedos...
-   Para mudar o espaçamento entre botões, altere: gap
-============================================= */
+/* botões de subcategoria */
 .subcategorias{
     display: flex;
     flex-wrap: wrap;
@@ -306,7 +237,6 @@ header{
     margin-bottom: 22px;
 }
 
-/* Estilo de cada botão de subcategoria */
 .subcategorias button{
     border: 1px solid rgba(255,255,255,0.2);
     padding: 9px 16px;
@@ -323,13 +253,11 @@ header{
     user-select: none;
 }
 
-/* Efeito ao passar o mouse na subcategoria */
 .subcategorias button:hover{
     background: rgba(255,255,255,0.28);
     transform: translateY(-2px);
 }
 
-/* Subcategoria ativa (selecionada) */
 .subcategorias button.ativo-sub{
     background: var(--laranja);
     color: white;
@@ -338,14 +266,7 @@ header{
 }
 
 
-/* =============================================
-   GRADE DE PRODUTOS
-   Define quantos cards aparecem por linha.
-   minmax(220px, 1fr) = mínimo 220px por card,
-   se sobrar espaço distribui igualmente.
-   Para cards maiores, aumente o valor 220px.
-   Para mais colunas, diminua o valor 220px.
-============================================= */
+/* grade de produtos */
 .lista-produtos{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -353,12 +274,7 @@ header{
 }
 
 
-/* =============================================
-   CARD DE PRODUTO
-   Cada caixinha de produto na grade.
-   Para mudar o arredondamento, altere: border-radius
-   Para mudar a cor de fundo, altere: background
-============================================= */
+/* card de produto */
 .card{
     background: var(--card-bg);
     border-radius: var(--radius);
@@ -369,41 +285,79 @@ header{
     flex-direction: column;
 }
 
-/* Efeito ao passar o mouse no card */
 .card:hover{
     transform: translateY(-5px);
     box-shadow: var(--shadow);
 }
 
+
 /* =============================================
    ÁREA DA IMAGEM DO PRODUTO
-   Fundo cinza claro onde a imagem fica.
-   Para mudar a altura, altere: height
-   Para mudar a cor de fundo, altere: background
+   Espaço reservado para você adicionar
+   as fotos de cada produto.
+
+   Como adicionar a imagem:
+   — No script.js, troque "../Img/produto1.png"
+     pelo caminho da imagem correta de cada produto.
+   — Coloque os arquivos na pasta /Img/.
+   — Exemplo: "../Img/racao-golden.png"
+
+   Para mudar a altura do espaço, altere: height
 ============================================= */
 .imagem-produto{
     background: #f0f4fb;
     border-radius: var(--radius-sm);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 155px;
     margin-bottom: 12px;
     overflow: hidden;
+    border: 2px dashed #c8d6f0;
+    position: relative;
 }
 
-/* Imagem do produto */
-.card img{
+/* ícone de câmera no placeholder */
+.imagem-produto::before{
+    content: '📷';
+    font-size: 28px;
+    opacity: 0.3;
+    display: block;
+}
+
+/* texto do placeholder */
+.imagem-produto::after{
+    content: 'Adicione a imagem';
+    font-size: 11px;
+    color: #aab8d4;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-top: 6px;
+    font-family: 'Nunito', sans-serif;
+}
+
+/* quando a imagem de fato existir, esconde o placeholder */
+.imagem-produto img{
+    position: absolute;
+    inset: 0;
     width: 100%;
-    height: 155px;
+    height: 100%;
     object-fit: contain;
+    background: #f0f4fb;
+    border-radius: var(--radius-sm);
+
+    /* esconde a imagem se ela quebrar (src inválido) */
+    display: none;
 }
 
-/* =============================================
-   NOME DO PRODUTO NO CARD
-   Para mudar o tamanho do texto, altere: font-size
-   Para mudar a cor, altere: color
-============================================= */
+/* mostra a imagem somente quando carregar corretamente */
+.imagem-produto img.carregada{
+    display: block;
+}
+
+
+/* nome do produto */
 .card h3{
     font-size: 15px;
     font-weight: 800;
@@ -412,12 +366,7 @@ header{
     line-height: 1.3;
 }
 
-/* =============================================
-   DESCRIÇÃO DO PRODUTO NO CARD
-   Texto menor abaixo do nome.
-   Para mudar o tamanho, altere: font-size
-   Para mudar a cor, altere: color
-============================================= */
+/* descrição */
 .card p{
     font-size: 12px;
     color: #777;
@@ -426,17 +375,8 @@ header{
     flex: 1;
 }
 
-/* Estrelas de avaliação */
-.avaliacao{
-    font-size: 12px;
-    margin-bottom: 10px;
-}
 
-
-/* =============================================
-   LINHA INFERIOR DO CARD (PREÇO + BOTÃO)
-   Contém o preço à esquerda e o botão à direita.
-============================================= */
+/* linha inferior: preço + botão */
 .info{
     display: flex;
     justify-content: space-between;
@@ -444,23 +384,14 @@ header{
     margin-top: auto;
 }
 
-/* =============================================
-   PREÇO DO PRODUTO
-   Para mudar o tamanho, altere: font-size
-   Para mudar a cor, altere: color
-============================================= */
+/* preço */
 .info span{
     font-size: 18px;
     font-weight: 800;
     color: #1a1a2e;
 }
 
-/* =============================================
-   BOTÃO DE ADICIONAR AO CARRINHO
-   Botão verde redondo com ícone de carrinho.
-   Para mudar a cor, altere: background (use var(--verde))
-   Para mudar o tamanho, altere: width e height
-============================================= */
+/* botão adicionar ao carrinho */
 .info button{
     width: 40px;
     height: 40px;
@@ -476,18 +407,13 @@ header{
     flex-shrink: 0;
 }
 
-/* Efeito ao passar o mouse no botão do carrinho */
 .info button:hover{
     background: var(--verde-hover);
     transform: scale(1.1);
 }
 
 
-/* =============================================
-   RODAPÉ DO SITE
-   Faixa escura no final da página.
-   Para mudar a cor de fundo, altere: background
-============================================= */
+/* rodapé */
 footer{
     background: rgba(0, 15, 60, 0.8);
     backdrop-filter: blur(12px);
@@ -496,7 +422,6 @@ footer{
     border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Área interna do rodapé */
 .footer-inner{
     max-width: 1400px;
     margin: 0 auto;
@@ -511,13 +436,7 @@ footer{
 }
 
 
-/* =============================================
-   NOTIFICAÇÃO FLUTUANTE (TOAST)
-   Mensagem que aparece na base da tela ao
-   adicionar um produto ao carrinho.
-   Para mudar a cor, altere: background
-   Não altere as propriedades de animação.
-============================================= */
+/* notificação flutuante */
 .notificacao{
     position: fixed;
     bottom: 28px;
@@ -538,29 +457,20 @@ footer{
     pointer-events: none;
 }
 
-/* Estado visível da notificação */
 .notificacao.visivel{
     transform: translateX(-50%) translateY(0);
     opacity: 1;
 }
 
 
-/* =============================================
-   RESPONSIVIDADE — TABLET GRANDE (até 1100px)
-   Reduz para 2 colunas de produtos
-============================================= */
+/* responsivo — tablet grande */
 @media(max-width: 1100px){
     .lista-produtos{
         grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     }
 }
 
-
-/* =============================================
-   RESPONSIVIDADE — TABLET (até 900px)
-   Menu lateral vai para cima (linha horizontal)
-   e produtos ficam abaixo em coluna única
-============================================= */
+/* responsivo — tablet */
 @media(max-width: 900px){
     .container{
         flex-direction: column;
@@ -585,103 +495,42 @@ footer{
         padding: 10px 12px;
         font-size: 13px;
     }
-    .categorias li:hover{
-        transform: translateY(-2px);
-    }
-    .categorias li.ativo{
-        transform: translateY(0);
-    }
-    .titulo-categoria{
-        font-size: 22px;
-    }
+    .categorias li:hover{ transform: translateY(-2px); }
+    .categorias li.ativo{ transform: translateY(0); }
+    .titulo-categoria{ font-size: 22px; }
     .lista-produtos{
         grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
         gap: 14px;
     }
 }
 
-
-/* =============================================
-   RESPONSIVIDADE — CELULAR GRANDE (até 600px)
-   Ajustes para smartphones maiores
-============================================= */
+/* responsivo — celular grande */
 @media(max-width: 600px){
-    .header-inner{
-        padding: 0 16px;
-    }
-    .logo{
-        font-size: 20px;
-    }
-    .btn-carrinho-header{
-        padding: 8px 14px;
-        font-size: 13px;
-    }
-    .container{
-        padding: 14px;
-        gap: 14px;
-    }
+    .header-inner{ padding: 0 16px; }
+    .logo{ font-size: 20px; }
+    .btn-carrinho-header{ padding: 8px 14px; font-size: 13px; }
+    .container{ padding: 14px; gap: 14px; }
     .categorias li{
         flex: 1 1 100px;
         font-size: 12px;
         gap: 6px;
         padding: 9px 10px;
     }
-    .cat-icon svg{
-        width: 16px;
-        height: 16px;
-    }
-    .titulo-categoria{
-        font-size: 20px;
-        margin-bottom: 14px;
-    }
-    .subcategorias{
-        gap: 7px;
-        margin-bottom: 16px;
-    }
-    .subcategorias button{
-        padding: 8px 13px;
-        font-size: 12px;
-    }
-    .lista-produtos{
-        grid-template-columns: repeat(2, 1fr);
-        gap: 12px;
-    }
-    .card{
-        padding: 13px;
-    }
-    .imagem-produto{
-        height: 120px;
-    }
-    .card img{
-        height: 120px;
-    }
-    .card h3{
-        font-size: 13px;
-    }
-    .info span{
-        font-size: 15px;
-    }
-    .info button{
-        width: 34px;
-        height: 34px;
-    }
-    .footer-inner{
-        flex-direction: column;
-        text-align: center;
-        font-size: 12px;
-    }
+    .cat-icon svg{ width: 16px; height: 16px; }
+    .titulo-categoria{ font-size: 20px; margin-bottom: 14px; }
+    .subcategorias{ gap: 7px; margin-bottom: 16px; }
+    .subcategorias button{ padding: 8px 13px; font-size: 12px; }
+    .lista-produtos{ grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .card{ padding: 13px; }
+    .imagem-produto{ height: 120px; }
+    .card h3{ font-size: 13px; }
+    .info span{ font-size: 15px; }
+    .info button{ width: 34px; height: 34px; }
+    .footer-inner{ flex-direction: column; text-align: center; font-size: 12px; }
 }
 
-
-/* =============================================
-   RESPONSIVIDADE — CELULAR PEQUENO (até 380px)
-   Smartphones menores — 1 coluna de produtos
-============================================= */
+/* responsivo — celular pequeno */
 @media(max-width: 380px){
-    .lista-produtos{
-        grid-template-columns: 1fr;
-    }
-    .categorias li{
-        flex: 1 1 80px;
-    }
+    .lista-produtos{ grid-template-columns: 1fr; }
+    .categorias li{ flex: 1 1 80px; }
 }
