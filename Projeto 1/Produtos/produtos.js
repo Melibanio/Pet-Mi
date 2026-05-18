@@ -461,7 +461,6 @@ const dados = {
 // ÍCONE SVG DO BOTÃO DE CARRINHO
 // Ícone vetorial exibido no botão verde
 // de cada card de produto.
-// Não altere a menos que queira trocar o ícone.
 // =============================================
 const svgCarrinho = `
 <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24"
@@ -474,33 +473,17 @@ const svgCarrinho = `
 
 
 // =============================================
-// ESTRELAS DE AVALIAÇÃO
-// Gera estrelas aleatórias para cada produto.
-// Para desativar as estrelas, remova a linha
-// ${estrelas()} dentro da função mostrarProdutos.
-// =============================================
-function estrelas(){
-    const notas  = ["★★★★★","★★★★☆","★★★★½","★★★☆☆"];
-    const textos = ["5.0","4.5","4.7","3.8"];
-    const i = Math.floor(Math.random() * notas.length);
-    return `<span style="color:#f59e0b;font-size:13px">${notas[i]}</span>
-            <span style="color:#999;font-size:11px">${textos[i]}</span>`;
-}
-
-
-// =============================================
 // MOSTRAR BOTÕES DE SUBCATEGORIA
 // Gera os botões (ex: Ração, Coleiras...)
 // com base na categoria selecionada.
-// Não altere esta função.
+// A quantidade foi removida dos botões.
 // =============================================
 function mostrarSubcategorias(nome){
     let html = "";
     const chaves = Object.keys(dados[nome]);
 
     chaves.forEach((item, index) => {
-        const total = dados[nome][item].length;
-        html += `<button class="${index === 0 ? "ativo-sub" : ""}">${item} (${total})</button>`;
+        html += `<button class="${index === 0 ? "ativo-sub" : ""}">${item}</button>`;
     });
 
     subcategorias.innerHTML = html;
@@ -513,11 +496,10 @@ function mostrarSubcategorias(nome){
 // MOSTRAR CARDS DE PRODUTOS
 // Gera os cards com nome, descrição, preço
 // e botão de adicionar ao carrinho.
-// Para mudar o layout do card, edite o HTML
-// dentro desta função (variável html +=).
+// Estrelas de avaliação foram removidas.
 // =============================================
 function mostrarProdutos(cat, sub){
-    // Remove o "(número)" do nome da subcategoria
+    // Remove o "(número)" do nome da subcategoria caso ainda venha com ele
     sub = sub.replace(/\s*\(\d+\)/g, "").trim();
 
     const produtos = dados[cat][sub];
@@ -537,9 +519,6 @@ function mostrarProdutos(cat, sub){
 
             <!-- Descrição do produto -->
             <p>${item[1]}</p>
-
-            <!-- Avaliação em estrelas -->
-            <div class="avaliacao">${estrelas()}</div>
 
             <!-- Preço e botão do carrinho -->
             <div class="info">
@@ -562,7 +541,6 @@ function mostrarProdutos(cat, sub){
 // ATIVAR CLIQUE NOS BOTÕES DE SUBCATEGORIA
 // Controla qual botão fica ativo e
 // carrega os produtos correspondentes.
-// Não altere esta função.
 // =============================================
 function ativarSubcategorias(nome){
     const botoes = document.querySelectorAll(".subcategorias button");
@@ -580,12 +558,6 @@ function ativarSubcategorias(nome){
 // CLICAR NAS CATEGORIAS DO MENU LATERAL
 // Ao clicar em uma categoria, atualiza
 // o título, subcategorias e produtos.
-//
-// Para adicionar uma nova categoria:
-// 1. Adicione o nome no ternário abaixo
-//    seguindo o padrão existente
-// 2. Adicione os dados em "dados" acima
-// 3. Adicione o <li> no HTML
 // =============================================
 categorias.forEach(item => {
     item.addEventListener("click", function(){
