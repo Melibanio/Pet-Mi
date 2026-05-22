@@ -98,6 +98,29 @@ body {
     border: 1px solid #ddd;
 }
 
+/* SENHAS LADO A LADO */
+
+.senhas {
+    display: flex;
+    gap: 10px;
+    width: 95%;
+    margin-left: 15px;
+}
+
+.senhas div {
+    width: 100%;
+}
+
+.senhas label {
+    margin-left: 0;
+}
+
+.senhas input {
+    width: 100%;
+    margin-left: 0;
+}
+
+
 .esqueciSenha-container button {
     width: 95%;
     margin-top: 30px;
@@ -116,3 +139,12 @@ body {
     background: var(--verde);
 }
 
+/* RESPONSIVO */
+
+@media (max-width: 600px) {
+
+    .senhas {
+        flex-direction: column;
+    }
+
+}
