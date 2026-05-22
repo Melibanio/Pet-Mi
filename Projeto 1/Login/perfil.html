@@ -5,7 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil</title>
+
     <link rel="stylesheet" href="perfil.css">
+
     <link rel="stylesheet"
         href="https://cdn-uicons.flaticon.com/4.0.0/uicons-regular-straight/css/uicons-regular-straight.css">
 
@@ -13,204 +15,110 @@
 </head>
 
 <body>
+
     <header>
-        <!--Menu simples login/cadastro para voltar ao home-->
         <a href="/Home/menu.html" class="logo">PET&MI</a>
     </header>
 
     <nav>
-        <img src="https://i.pinimg.com/736x/1a/d3/e4/1ad3e46ecd880c19e721e44ef653982f.jpg" alt="foto">
+
+        <div class="foto-perfil">
+
+            <img id="preview-foto" src="" alt="">
+
+            <input type="file" id="input-foto" accept="image/*">
+
+        </div>
 
         <hr>
 
         <a href="#perfil">Perfil</a>
         <span>Meus dados</span>
-        <a href="#favoritos">Favoritos</a>
-        <span>Meus favoritos</span>
+
         <a href="#pedidos">Pedidos</a>
         <span>Consultar</span>
+
     </nav>
 
     <main>
+
+        <!-- PERFIL -->
+
         <section class="perfil-container">
-
-            <h1 id="perfil">Meus Dados</h1>
-
 
             <h2>Nome</h2>
             <div class="campo">
-                <p>Laura de Melo</p>
+                <input type="text" value="Laura de Melo" disabled>
             </div>
-
 
             <h2>E-mail</h2>
             <div class="campo">
-                <p>adm@gmail.com</p>
+                <input type="email" value="adm@gmail.com" disabled class="email">
             </div>
-
 
             <h2>Telefone</h2>
             <div class="campo">
-                <p>(11) 99999-9999</p>
+                <input type="text" value="(11) 99999-9999" disabled>
             </div>
-
 
             <h2>Nascimento</h2>
             <div class="campo">
-                <p>14/07/1995</p>
+                <input type="date" value="1995-07-14" disabled>
             </div>
-
 
             <h2>Cidade</h2>
             <div class="campo">
-                <p>São Paulo - SP</p>
+                <input type="text" value="São Paulo - SP" disabled>
             </div>
 
-            <button>Editar perfil</button>
+            <button id="editar-btn">Editar perfil</button>
 
         </section>
 
-        <hr>
 
-        <section class="favoritos-container">
-            <h1 id="favoritos">Favoritos</h1>
-
-            <div class="campo">
-
-                <div class="produtos">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1083739-368-368/Adaptador-para-Cinto-de-Seguranca-Toh-Fiji-detalhes-do-mosquetao--1-.webp?v=638919008095730000"
-                        alt="imagem">
-
-                    <p>Adaptador para Cinto de Segurança Toh Fiji Único</p>
-                    <p>R$47,90</p>
-
-                    <div class="acoes">
-                        <button>
-                            <i class="fi fi-rs-shopping-cart"></i>
-                        </button>
-
-                        <button class="favorito">
-                            <i class="fi fi-sr-heart"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="produtos">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1071654-368-368/Petisco-Origem-Natural-Crost-Lombinho.webp.webp?v=638817844846330000"
-                        alt="imagem">
-
-                    <p>Petisco Origem Natural Crost Lombinho 100 g</p>
-                    <p>R$20,30</p>
-
-                    <div class="acoes">
-                        <button>
-                            <i class="fi fi-rs-shopping-cart"></i>
-                        </button>
-
-                        <button class="favorito">
-                            <i class="fi fi-sr-heart"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="produtos">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1097064-368-368/tapete-higienico-petix-supersecao-max-citrus-30-uni-2.webp?v=639070342457470000"
-                        alt="imagem">
-
-                    <p>Tapete Higiênico Super Secão Max Citrus 80x60cm 30 unidades</p>
-                    <p>R$129,90</p>
-
-                    <div class="acoes">
-                        <button>
-                            <i class="fi fi-rs-shopping-cart"></i>
-                        </button>
-
-                        <button class="favorito">
-                            <i class="fi fi-sr-heart"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="produtos">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1096988-368-368/CAMA-OSSINHO-PRETO-FLICKS.png.png?v=639070115064470000"
-                        alt="imagem">
-
-                    <p>Cama Flicks Ossinho Preta para Cães e Gatos M</p>
-                    <p>R$224,90</p>
-
-                    <div class="acoes">
-                        <button>
-                            <i class="fi fi-rs-shopping-cart"></i>
-                        </button>
-
-                        <button class="favorito">
-                            <i class="fi fi-sr-heart"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <hr>
+        <!-- PEDIDOS -->
 
         <section class="pedido-container">
+
             <h1 id="pedidos">Pedidos</h1>
 
             <div class="campo">
+
                 <div class="status">
                     <h2>Pedido entregue</h2>
                 </div>
+
                 <div class="linhap">
                     <hr>
                 </div>
 
                 <div class="pedido">
+
                     <img src="https://cobasi.vteximg.com.br/arquivos/ids/1089310-368-368/Antipulgas-Simparic-20mg-para-Caes-5-a-10kg.webp?v=638975066147900000"
-                        alt="imagem">
+                        alt="produto">
+
                     <img src="https://cobasi.vteximg.com.br/arquivos/ids/1058013-368-368/cobertor-rosa.png?v=638887885462570000"
-                        alt="imagem">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1037892-368-368/Frente.jpg?v=638720232191170000"
-                        alt="imagem">
+                        alt="produto">
 
                     <div class="texto">
+
                         <p><strong>123456789pmi-01</strong></p>
+
                         <p>15/04/2026</p>
+
                         <p>R$494,30</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="campo">
-                <div class="status">
-                    <h2>Pedido entregue</h2>
-                </div>
-                <div class="linhap">
-                    <hr>
-                </div>
-
-                <div class="pedido">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/1095580-368-368/Cookie-Premier-Caes-Adultos-Porte-Pequeno-Frutas-Vermelhas-e-Aveia-250g-frente.png?v=639035695829570000"
-                        alt="imagem">
-                    <img src="https://cobasi.vteximg.com.br/arquivos/ids/985906-368-368/CLORESTEN-SHAMPOO-500ML.jpg?v=638122443330930000"
-                        alt="imagem">
-
-                    <div class="texto">
-                        <p><strong>123456790pmi-01</strong></p>
-                        <p>24/03/2026</p>
-                        <p>R$218,80</p>
                     </div>
 
-
-
                 </div>
+
             </div>
+
         </section>
-    </main>
 
-    <footer>
-        <h1>Fiz de tudo e esse Footer nao funciona direito.
-            Melissa, deixo para voce ❤</h1>
-    </footer>
+    </main>
+    <script src="perfil.js"></script>
+
 
 </body>
 
