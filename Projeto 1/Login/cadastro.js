@@ -1,8 +1,8 @@
 // cadastro.js
-// Validação do formulário de cadastro
-// Após cadastrar com sucesso, redireciona para a página de login.
+// Validação + registro de usuário no localStorage
 
 document.addEventListener("DOMContentLoaded", function () {
+
     // Seleciona o formulário
     const form = document.querySelector(".cadastro-container form");
 
@@ -14,16 +14,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Evento ao enviar o formulário
     form.addEventListener("submit", function (event) {
-        // Impede o envio padrão do formulário
+
+        // Impede envio padrão
         event.preventDefault();
 
-        // Remove espaços extras
+        // Remove espaços
         const valorNome = nome.value.trim();
         const valorEmail = email.value.trim();
         const valorSenha = senha.value.trim();
         const valorConfirmarSenha = confirmarSenha.value.trim();
 
-        // Verifica se todos os campos foram preenchidos
+        // VALIDAÇÕES
+
         if (
             valorNome === "" ||
             valorEmail === "" ||
@@ -34,14 +36,14 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Verifica se o nome possui pelo menos 3 caracteres
+        // Nome válido
         if (valorNome.length < 3) {
             alert("Digite um nome válido.");
             nome.focus();
             return;
         }
 
-        // Validação simples de e-mail
+        // Validação de e-mail
         const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
         if (!regexEmail.test(valorEmail)) {
@@ -50,24 +52,36 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        // Verifica se a senha possui pelo menos 6 caracteres
+        // Senha mínima
         if (valorSenha.length < 6) {
             alert("A senha deve conter pelo menos 6 caracteres.");
             senha.focus();
             return;
         }
 
-        // Verifica se as senhas são iguais
+        // Confirma senha
         if (valorSenha !== valorConfirmarSenha) {
             alert("As senhas não coincidem.");
             confirmarSenha.focus();
             return;
         }
 
-        // Mensagem de sucesso
+        // REGISTRO NO LOCALSTORAGE
+
+        const usuario = {
+            nome: valorNome,
+            email: valorEmail,
+            senha: valorSenha
+        };
+
+        // Salva usuário
+        localStorage.setItem("usuario", JSON.stringify(usuario));
+
         alert("Cadastro realizado com sucesso!");
 
-        // Redireciona para a página de login
+        // Redireciona
         window.location.href = "login.html";
+
     });
+
 });
