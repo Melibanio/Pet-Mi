@@ -1,45 +1,68 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-    // Seleciona o formulário
+
+    // Formulário
     const form = document.querySelector(".login-container form");
 
-    // Seleciona os campos
+    // Campos
     const email = document.getElementById("user");
     const senha = document.getElementById("senha");
 
-    // Evento ao enviar o formulário
+    // Evento submit
     form.addEventListener("submit", function (event) {
-        // Remove espaços extras
+
+        event.preventDefault();
+
+        // Valores digitados
         const valorEmail = email.value.trim();
         const valorSenha = senha.value.trim();
 
-        // Verifica se os campos estão preenchidos
+        // ===============================
+        // VALIDAÇÕES
+        // ===============================
+
         if (valorEmail === "" || valorSenha === "") {
-            event.preventDefault();
-            alert("Por favor, preencha todos os campos.");
+            alert("Preencha todos os campos.");
             return;
         }
 
-        // Validação simples de e-mail
-        const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        // ===============================
+        // PEGA USUÁRIO SALVO
+        // ===============================
 
-        if (!regexEmail.test(valorEmail)) {
-            event.preventDefault();
-            alert("Digite um e-mail válido.");
-            email.focus();
+        const usuarioSalvo = JSON.parse(localStorage.getItem("usuario"));
+
+        // Verifica se existe cadastro
+        if (!usuarioSalvo) {
+            alert("Nenhum usuário cadastrado.");
             return;
         }
 
-        // Verifica tamanho mínimo da senha
-        if (valorSenha.length < 6) {
-            event.preventDefault();
-            alert("A senha deve ter pelo menos 6 caracteres.");
-            senha.focus();
-            return;
-        }
+        // Verifica o tipo de login
 
-        // Mensagem opcional antes do envio
-        alert("Login realizado com sucesso!");
-        window.location.href = "home.html";
+        if (
+            valorEmail === usuarioSalvo.email &&
+            valorSenha === usuarioSalvo.senha
+        ) {
+
+            alert("Login realizado com sucesso!");
+
+            // pega parte antes do @
+            const prefixo = valorEmail.split("@")[0];
+
+            // regra de ADM
+            if (
+                prefixo.startsWith("adm") ||
+                prefixo.startsWith("dev")
+            ) {
+                window.location.href = "admin.html";
+            } else {
+                window.location.href = "home.html";
+            }
+
+        } else {
+
+            alert("E-mail ou senha incorretos.");
+        }
     });
+
 });
