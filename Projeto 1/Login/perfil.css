@@ -3,308 +3,308 @@
     --olivia: #667d41;
     --laranja: #f27a21;
     --terra: #b43f1d;
-    --cobalto: #2a3691;
-    --azul: #4d61d4;
     --branco: #fff;
-    --preto: #000;
+    --cinza: #f5f5f5;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
     font-family: Georgia, 'Times New Roman', Times, serif;
-    outline: none;
-    border: none;
+
     text-decoration: none;
+    border: none;
+    outline: none;
+
     transition: .2s linear;
-
-
 }
 
 html {
     font-size: 62.5%;
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem;
-    overflow-x: hidden;
-}
-
-/*Menu simples login/cadastro para voltar ao home */
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    padding: 2rem 9%;
-    display: flex;
-    justify-content: space-between;
-    background-color: #667d41;
-}
-
-header .logo {
-    font-size: 3rem;
-    color: #fff;
-    font-weight: bolder;
-    text-decoration: none;
-}
-
-header #toggler {
-    display: none;
 }
 
 body {
-   
-    background: #f5f5f5;
+    background: var(--cinza);
+    overflow-x: hidden;
 }
 
-/* Menu lateral */
+/* HEADER */
+
+header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 1000;
+
+    padding: 2rem 5%;
+
+    display: flex;
+    align-items: center;
+
+    background: var(--olivia);
+
+    box-shadow: 0 .3rem 1rem rgba(0, 0, 0, .1);
+}
+
+.logo {
+    font-size: 3rem;
+    font-weight: bold;
+
+    color: var(--branco);
+}
+
+/* NAV */
+
 nav {
+    position: fixed;
+    top: 9rem;
+    left: 2rem;
+    width: 25rem;
+    height: calc(100vh - 11rem);
+    overflow-y: auto;
+    background: #b43f1d;
+    border-radius: 2rem;
+    padding: 2.5rem 1.5rem;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    top: 75px;
-    left: 0;
-    width: 260px;
-    min-height: 87vh;
-    background: #b43f1d;
-    border-bottom-left-radius: 50px;
-    overflow-y: auto;
-
+    align-items: center;
 }
 
-nav img {
-    width: 145px;
-    border-radius: 80px;
-    margin-bottom: 15px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 45px;
+/* FOTO */
 
+.foto-perfil {
+    position: relative;
+    width: 11rem;
+    height: 11rem;
+    border-radius: 50%;
+    overflow: hidden;
+    background: var(--olivia);
+    border: .3rem solid var(--branco);
+    cursor: pointer;
 }
+
+.foto-perfil::before {
+    content: "+";
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 4rem;
+    font-weight: bold;
+    background: rgba(0,0,0,.3);
+    transition: .2s;
+}
+
+.foto-perfil.com-foto::before {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.foto-perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+#input-foto {
+    display: none;
+}
+
 
 nav hr {
-    border: 1px solid #fff;
-    width: 90%;
-    margin: 15px auto;
+    width: 100%;
+    height: .1rem;
+    background: rgba(255, 255, 255, .2);
+    margin: 2rem 0;
 }
 
 nav a {
-    text-decoration: none;
-    color: #fff;
-    margin-left: 35px;
-    margin-top: 15px;
-    font-size: 1.8rem;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color: var(--branco);
+    border-radius: 1rem;
+    margin-top: 1rem;
 }
 
 nav a:hover {
-    color: #000;
-    transition: 0, 3s;
+    background: rgba(255, 255, 255, .1);
 }
 
-span {
-    margin-left: 35px;
-    font-size: 1.3rem;
-    color: #ccc;
+nav span {
+    margin-right: 14rem;
+    font-size: 1.2rem;
+    color: #ddd;
 }
 
-/* Comeco Perfil */
+/* MAIN */
+
 main {
-    margin-top: 85px;
-    margin-left: 260px;
-}
-
-main hr {
-    border: 1px solid #f27a21;
-    width: 90%;
-    margin: 45px auto;
-
-}
-
-.perfil-container {
+    margin-left: 31rem;
+    margin-top: 10rem;
+    padding: 3rem;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 100%;
-    min-height: 80vh;
+    gap: 4rem;
 }
 
-.perfil-container h1 {
-    margin-left: 115px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #f27a21;
+/* SECTIONS */
+
+.perfil-container,
+.favoritos-container,
+.pedido-container {
+    background: var(--branco);
+    padding: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .08);
 }
 
-.perfil-container h2 {
-    margin-left: 120px;
-    font-size: 1.5rem;
+section h1 {
+    font-size: 3rem;
+    color: var(--verde);
+    margin-bottom: 3rem;
 }
+
+/* CAMPOS */
 
 .campo {
-    background: #ede9e9;
-    padding: 10px;
-    border-radius: 15px;
-    margin-left: 120px;
-    margin-bottom: 15px;
-    width: 35%;
+    margin-bottom: 2rem;
+}
 
+section h2 {
+    font-size: 1.8rem;
+    color: var(--verde);
+    margin-bottom: .8rem;
 }
 
 .campo p {
-    font-size: 1.3rem;
+    font-size: 1.6rem;
+    color: #444;
+}
+
+/* INPUTS */
+
+.campo input {
+    width: 100%;
+    background: transparent;
+    font-size: 1.6rem;
+    color: #444;
+}
+
+.campo input:disabled {
+    cursor: default;
+}
+
+/* PERFIL */
+
+.perfil-container .campo {
+    background: var(--cinza);
+    padding: 1.5rem;
+    border-radius: 1rem;
 }
 
 .perfil-container button {
-    background-color: #ccc;
-    width: 200px;
-    margin-left: 120px;
-    border-radius: 20px;
-    padding: 10px;
+    margin-top: 2rem;
+    padding: 1.3rem 2rem;
+    background: var(--laranja);
+    color: var(--branco);
+    border-radius: 1rem;
     font-size: 1.6rem;
     cursor: pointer;
 }
-
 
 .perfil-container button:hover {
-    background: #b43f1d;
-    color: #fff;
+    background: var(--terra);
 }
 
 
-/* Comeco do Favoritos*/
-.favoritos-container {
-    width: 100%;
-}
-
-.favoritos-container .campo {
-    display: flex;
-    gap: 20px;
-    padding: 0 115px;
-    align-items: flex-start;
-    background-color: #f5f5f5;
-    margin: 0;
-}
-
-.favoritos-container h1 {
-    margin-left: 115px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #f27a21;
-}
-
-.produtos {
-    background: #fff;
-    width: 200px;
-    padding: 15px;
-    border-radius: 20px;
-    height: 55vh;
-    flex: none;
-}
-
-.produtos img {
-    width: 100%;
-    border-radius: 15px;
-}
-
-.produtos p {
-    font-size: 1.4rem;
-    margin-top: 10px;
-}
-
-.acoes {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
-}
-
-.acoes button {
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 1.6rem;
-    border: none;
-}
-
-.acoes button:hover {
-    background: #f27a21;
-}
-
-.acoes button:hover i {
-    color: #fff;
-}
-
-.favorito i {
-    color: #b43f1d;
-}
-
-/* Comeco pedidos */
-
-.pedido-container {
-    width: 100%;
-    margin-bottom: 150px;
-}
-
-.pedido-container h1 {
-    margin-left: 115px;
-    margin-top: 45px;
-    margin-bottom: 20px;
-    font-size: 2.5rem;
-    color: #f27a21;
-}
-
-.pedido-container h2 {
-    width: 170px;
-    border-radius: 10px;
-    padding: 8px;
-    font-size: 1.6rem;
-    text-align: center;
-    color: #2a3691;
-    background-color: #4d61d4;
- 
-    
-}
-
-.pedido-container .linhap hr {
-    border: 1px solid #ccc;
-    width: 100%;
-    margin: 15px auto;
-
-}
+/* PEDIDOS */
 
 .pedido-container .campo {
-    width: 80%;
-    padding: 20px; 
-    margin-left: 115px;
-}
-.pedido-container .pedido {
-    display: flex;
-    gap: 15px;
+    background: var(--cinza);
+    border-radius: 1.5rem;
+    padding: 2rem;
 }
 
-.pedido-container img {
-    width: 150px;
-    height: 150px;
-    border-radius: 20px;
-    
-}
-.pedido-container  .texto {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    text-align: right;
-    font-size: 1.4rem;
-    margin-top: auto;
-    gap: 5px;
-
+.status h2 {
+    font-size: 2rem;
+    color: var(--olivia);
 }
 
-footer {
+.linhap hr {
+    height: .1rem;
+    background: #ccc;
+    margin: 1.5rem 0;
+}
+
+.pedido {
     display: flex;
-    position: absolute;
-    width: 100%;
-    background: #667d41;
-    height: 50vh;
-    color: #ccc;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.pedido img {
+    width: 9rem;
+    height: 9rem;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.texto {
+    margin-left: auto;
+}
+
+.texto p {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+/* RESPONSIVO */
+
+@media (max-width: 900px) {
+
+    nav {
+        position: relative;
+        top: 9rem;
+        left: 0;
+        width: 100%;
+        height: auto;
+        border-radius: 0;
+    }
+
+    main {
+        margin-left: 0;
+        margin-top: 12rem;
+        padding: 2rem;
+    }
+
+    .perfil-container,
+    .favoritos-container,
+    .pedido-container {
+        padding: 2rem;
+    }
+
+    .pedido {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .texto {
+        margin-left: 0;
+    }
+
+    .produtos img {
+        height: 18rem;
+    }
 }
