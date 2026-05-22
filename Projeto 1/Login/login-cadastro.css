@@ -19,8 +19,6 @@
     text-decoration: none;
     text-transform: capitalize;
     transition: .2s linear;
-
-
 }
 
 html {
@@ -28,15 +26,24 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 6rem;
     overflow-x: hidden;
+}
 
+body {
+    overflow-x: hidden;
+    background: #fff;
 }
 
 section {
     padding: 2rem 9%;
-
 }
 
-/*Menu simples login/cadastro para voltar ao home */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* HEADER */
+
 header {
     position: fixed;
     top: 0;
@@ -45,37 +52,30 @@ header {
     padding: 2rem 9%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: #667d41;
+    z-index: 1000;
 }
 
 header .logo {
     font-size: 3rem;
     color: #fff;
     font-weight: bolder;
-    text-decoration: none;
 }
 
 header #toggler {
     display: none;
 }
 
-/* CSS do login */
-.login-container body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    height: 100vh;
-    margin: 0;
-    background: #fff;
-
-}
+/* ========================= */
+/* LOGIN */
+/* ========================= */
 
 .login-container {
-    width: 550px;
+    width: 100%;
+    max-width: 550px;
     margin: 0 auto;
-
-
+    padding: 20px;
 }
 
 .name {
@@ -90,7 +90,6 @@ header #toggler {
 .login-container form {
     padding: 14px;
     border-radius: 20px;
-
 }
 
 .login-container h2 {
@@ -98,13 +97,11 @@ header #toggler {
     margin-bottom: 10px;
     margin-left: 25px;
     font-size: 1.8rem;
-
 }
 
 .login-container hr {
     width: 100%;
-    margin-top: 0; 
-
+    margin-top: 0;
 }
 
 .login-container label {
@@ -125,7 +122,6 @@ header #toggler {
     font-size: 1.3rem;
     background: #ede9e9;
     color: #000;
-
 }
 
 .esqueciSenha {
@@ -134,16 +130,12 @@ header #toggler {
 }
 
 .esqueciSenha a {
-    text-decoration: none;
     color: #b43f1d;
-    transition: 0.3;
     font-size: 1.2rem;
-
 }
 
 .esqueciSenha a:hover {
     color: #000;
-
 }
 
 .login-container button {
@@ -157,7 +149,7 @@ header #toggler {
     text-align: center;
     background: #667d41;
     color: #fff;
-
+    cursor: pointer;
 }
 
 .login-container button:hover {
@@ -173,48 +165,44 @@ button a {
 }
 
 .login-container a {
-    text-decoration: none;
     color: #b43f1d;
-    transition: 0.3;
-
 }
 
 .login-container a:hover {
     color: #000;
-
 }
 
-/* Fim do CSS login */
+/* ========================= */
+/* CADASTRO */
+/* ========================= */
 
-/* CSS do cadastro */
 .cadastro-container {
     display: flex;
-    gap: 330px;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 140px 20px 40px;
 }
 
 .cadastro-container form {
-    margin-left: 450px;
-    margin-top: 175px;
     border-radius: 20px;
     width: 100%;
-    max-width: 550px;
-    height: 60vh;
-    background: #ede9e9;   
+    max-width: 700px;
+    background: #ede9e9;
+    padding: 40px;
 }
 
 .cadastro-container h2 {
     font-size: 1.8rem;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 20px;
-    margin-left: 50px;
     font-weight: bold;
-    color: #4d61d4; 
+    color: #4d61d4;
 }
 
 .cadastro-container hr {
-    width: 90%;
-    margin: auto;
-
+    width: 100%;
+    margin-bottom: 20px;
 }
 
 .cadastro-container label {
@@ -222,20 +210,21 @@ button a {
     margin-top: 15px;
     margin-bottom: 8px;
     color: #000;
+    display: block;
 }
 
 .cadastro-container input {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     border-radius: 10px;
     border: 1px solid #ccc;
-    font-size: 1.3rem;  
+    font-size: 1.3rem;
 }
 
 .cadastro-container input::placeholder {
     font-size: 1.4rem;
 }
- 
+
 .crieSenha {
     display: flex;
     gap: 20px;
@@ -250,39 +239,115 @@ button a {
 .cadastrar {
     display: block;
     text-align: center;
-    margin: 45px auto;
+    margin: 45px auto 0 auto;
     font-size: 1.8rem;
     width: 100%;
-    max-width: 550px;
     background-color: #4d61d4;
     color: white;
     padding: 14px;
     border: 1px solid #4d61d4;
     border-radius: 32px;
-    text-decoration: none;
+    cursor: pointer;
 }
 
 .cadastrar:hover {
     background-color: #2a3691;
-    transition: 0.3s;
 }
 
-.imagem img {
-    display: flex;
-    width: 100%;
-    right: 0;
-    height: 91vh;
-    margin-top: 85px;
-    margin-left: 0;
 
-    -webkit-mask-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0)
-    );
-    mask-image: linear-gradient(
-        to left,
-        rgba(0, 0, 0, 1),
-        rgba(0, 0, 0, 0)
-    );    
+
+/* ========================= */
+/* RESPONSIVO */
+/* ========================= */
+
+@media (max-width: 1024px) {
+
+    html {
+        font-size: 58%;
+    }
+
+    .cadastro-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .imagem img {
+        max-width: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    html {
+        font-size: 56%;
+    }
+
+    header {
+        padding: 2rem 5%;
+    }
+
+    header .logo {
+        font-size: 2.2rem;
+    }
+
+    section {
+        padding: 2rem 5%;
+    }
+
+    .name {
+        font-size: 3rem;
+        margin-top: 130px;
+    }
+
+    .login-container {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .login-container input,
+    .login-container button {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .login-container h2,
+    .login-container label {
+        margin-left: 0;
+    }
+
+    .cadastro-container {
+        flex-direction: column;
+        padding: 120px 20px 40px;
+        gap: 30px;
+    }
+
+    .cadastro-container form {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .crieSenha {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .imagem img {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+
+    html {
+        font-size: 52%;
+    }
+
+    .name {
+        font-size: 2.5rem;
+    }
+
+    .login-container button,
+    .cadastrar {
+        font-size: 1.6rem;
+    }
 }
